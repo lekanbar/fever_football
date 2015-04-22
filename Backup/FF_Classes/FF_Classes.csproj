@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C478744F-FC44-4F4A-8595-75F228E8FE54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FF_Classes</RootNamespace>
+    <AssemblyName>FF_Classes</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=2.3.2.632, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL" />
+    <Reference Include="CookComputing.XmlRpcV2, Version=2.5.0.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL" />
+    <Reference Include="Intelligencia.UrlRewriter, Version=2.0.0.6, Culture=neutral, PublicKeyToken=0573f3650687980d, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL" />
+    <Reference Include="nStuff.UpdateControls, Version=1.2.0.0, Culture=neutral, PublicKeyToken=72f3f55dd4809977, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YAF, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Classes.Config, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Classes.Data, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Controls, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Core, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Providers, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Types, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+    <Reference Include="YAF.Utils, Version=1.9.5.5, Culture=neutral, PublicKeyToken=f3828393ba2d803c, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Article.cs" />
+    <Compile Include="BLL\Assists.cs" />
+    <Compile Include="BLL\ChampionsGoalScorers.cs" />
+    <Compile Include="BLL\ChampionsLeagueGroup.cs" />
+    <Compile Include="BLL\Comments.cs" />
+    <Compile Include="BLL\ChampionsLeagueOther.cs" />
+    <Compile Include="BLL\ChampionsLeagueTable.cs" />
+    <Compile Include="BLL\CommentSubscriptions.cs" />
+    <Compile Include="BLL\GoalScorers.cs" />
+    <Compile Include="BLL\Groups.cs" />
+    <Compile Include="BLL\Leagues.cs" />
+    <Compile Include="BLL\LeagueTables.cs" />
+    <Compile Include="BLL\Matches.cs" />
+    <Compile Include="BLL\News.cs" />
+    <Compile Include="BLL\Polls.cs" />
+    <Compile Include="BLL\Season.cs" />
+    <Compile Include="BLL\Team.cs" />
+    <Compile Include="BLL\TopScorers.cs" />
+    <Compile Include="BLL\UserComment.cs" />
+    <Compile Include="BLL\UserComment2.cs" />
+    <Compile Include="BLL\UserExtras.cs" />
+    <Compile Include="BLL\Votes.cs" />
+    <Compile Include="DAL\DatabaseHepler.cs" />
+    <Compile Include="DAL\FFLinqClass.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FFLinqClass.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DomainList.cs" />
+    <Compile Include="Utility\EmailHelper.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\ImageManipulator.cs" />
+    <Compile Include="Utility\Misc.cs" />
+    <Compile Include="Utility\UploadHelper.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DAL\FFLinqClass.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FFLinqClass.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DAL\FFLinqClass.dbml.layout">
+      <DependentUpon>FFLinqClass.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Depends\Autofac.dll" />
+    <Content Include="Depends\Autofac.xml" />
+    <Content Include="Depends\CookComputing.XmlRpcV2.dll" />
+    <Content Include="Depends\Intelligencia.UrlRewriter.dll" />
+    <Content Include="Depends\Intelligencia.UrlRewriter.XML" />
+    <Content Include="Depends\Moq.dll" />
+    <Content Include="Depends\Moq.xml" />
+    <Content Include="Depends\nStuff.UpdateControls.dll" />
+    <Content Include="Depends\YAF.Classes.Config.dll" />
+    <Content Include="Depends\YAF.Classes.Config.XML" />
+    <Content Include="Depends\YAF.Classes.Data.dll" />
+    <Content Include="Depends\YAF.Classes.Data.XML" />
+    <Content Include="Depends\YAF.Controls.dll" />
+    <Content Include="Depends\YAF.Controls.XML" />
+    <Content Include="Depends\YAF.Core.dll" />
+    <Content Include="Depends\YAF.dll" />
+    <Content Include="Depends\YAF.Providers.dll" />
+    <Content Include="Depends\YAF.Providers.XML" />
+    <Content Include="Depends\YAF.Types.dll" />
+    <Content Include="Depends\YAF.Utils.dll" />
+    <Content Include="Depends\YAF.XML" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

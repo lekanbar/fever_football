@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FeverFootballDB" Class="FFLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=banxman-pc\sqlexpress;Initial Catalog=FeverFootballDB;Integrated Security=True" SettingsObjectName="FF_Classes.Properties.Settings" SettingsPropertyName="FeverFootballDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FF_Article" Member="FF_Articles">
+    <Type Name="FF_Article">
+      <Column Name="ArticleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FF_User_FF_Article" Member="FF_User" ThisKey="UserID" Type="FF_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Votes" Member="FF_Votes">
+    <Type Name="FF_Vote">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Option]" Member="Option" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Votes" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Poll_FF_Vote" Member="FF_Poll" ThisKey="QuestionID" Type="FF_Poll" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionGoalScorers" Member="FF_ChampionGoalScorers">
+    <Type Name="FF_ChampionGoalScorer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MatchID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlayerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Minute" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsGroupStage_FF_ChampionGoalScorer" Member="FF_ChampionsGroupStage" ThisKey="MatchID" Type="FF_ChampionsGroupStage" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionGoalScorer" Member="FF_Team" ThisKey="TeamID" Type="FF_Team" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsGroupStages" Member="FF_ChampionsGroupStages">
+    <Type Name="FF_ChampionsGroupStage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team2PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team1Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Team2PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Team1Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team2Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsGroupStage_FF_ChampionGoalScorer" Member="FF_ChampionGoalScorers" OtherKey="MatchID" Type="FF_ChampionGoalScorer" />
+      <Association Name="FF_Season_FF_ChampionsGroupStage" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage" Member="FF_Team" ThisKey="Team1ID" Type="FF_Team" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage1" Member="FF_Team1" ThisKey="Team2ID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables">
+    <Type Name="FF_ChampionsLeagueTable">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="P" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="W" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="L" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="F" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Diff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsLegaueGroup_FF_ChampionsLeagueTable" Member="FF_ChampionsLegaueGroup" ThisKey="GroupID" Type="FF_ChampionsLegaueGroup" IsForeignKey="true" />
+      <Association Name="FF_Season_FF_ChampionsLeagueTable" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsLeagueTable" Member="FF_Team" ThisKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsLegaueGroups" Member="FF_ChampionsLegaueGroups">
+    <Type Name="FF_ChampionsLegaueGroup">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Group]" Member="Group" Type="System.Char" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsLegaueGroup_FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables" OtherKey="GroupID" Type="FF_ChampionsLeagueTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsOtherStages" Member="FF_ChampionsOtherStages">
+    <Type Name="FF_ChampionsOtherStage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team2PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team1Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Team2PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Team1Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team2Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Aggregate1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Aggregate2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Leg" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Season_FF_ChampionsOtherStage" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage" Member="FF_Team" ThisKey="Team1ID" Type="FF_Team" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage1" Member="FF_Team1" ThisKey="Team2ID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Comments" Member="FF_Comments">
+    <Type Name="FF_Comment">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OwnerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Comment_FF_UserComment" Member="FF_UserComments" OtherKey="CommentID" Type="FF_UserComment" />
+      <Association Name="FF_Comment_FF_UserComment2" Member="FF_UserComment2s" OtherKey="CommentID" Type="FF_UserComment2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Forum" Member="FF_Forums">
+    <Type Name="FF_Forum">
+      <Column Name="ForumID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Topic" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PostedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_GoalScorers" Member="FF_GoalScorers">
+    <Type Name="FF_GoalScorer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MatchID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlayerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Minute" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Match_FF_GoalScorer" Member="FF_Match" ThisKey="MatchID" Type="FF_Match" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_GoalScorer" Member="FF_Team" ThisKey="TeamID" Type="FF_Team" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Leagues" Member="FF_Leagues">
+    <Type Name="FF_League">
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LogoURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="FF_League_FF_LeagueTable" Member="FF_LeagueTables" OtherKey="LeagueID" Type="FF_LeagueTable" />
+      <Association Name="FF_League_FF_Match" Member="FF_Matches" OtherKey="LeagueID" Type="FF_Match" />
+      <Association Name="FF_League_FF_New" Member="FF_News" OtherKey="LeagueID" Type="FF_New" />
+      <Association Name="FF_League_FF_Team" Member="FF_Teams" OtherKey="LeagueID" Type="FF_Team" />
+      <Association Name="FF_League_FF_TopScorer" Member="FF_TopScorers" OtherKey="LeagueID" Type="FF_TopScorer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_LeagueTables" Member="FF_LeagueTables">
+    <Type Name="FF_LeagueTable">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="P" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="W" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="L" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="F" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Diff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FF_League_FF_LeagueTable" Member="FF_League" ThisKey="LeagueID" Type="FF_League" IsForeignKey="true" />
+      <Association Name="FF_Season_FF_LeagueTable" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_LeagueTable" Member="FF_Team" ThisKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Matches" Member="FF_Matches">
+    <Type Name="FF_Match">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team2PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team1Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Team2PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Team1Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team2Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Match_FF_GoalScorer" Member="FF_GoalScorers" OtherKey="MatchID" Type="FF_GoalScorer" />
+      <Association Name="FF_League_FF_Match" Member="FF_League" ThisKey="LeagueID" Type="FF_League" IsForeignKey="true" />
+      <Association Name="FF_Season_FF_Match" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_Match" Member="FF_Team" ThisKey="Team1ID" Type="FF_Team" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_Match1" Member="FF_Team1" ThisKey="Team2ID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_News" Member="FF_News">
+    <Type Name="FF_New">
+      <Column Name="NewsID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="FF_League_FF_New" Member="FF_League" ThisKey="LeagueID" Type="FF_League" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="FF_Season_FF_New" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Polls" Member="FF_Polls">
+    <Type Name="FF_Poll">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Option2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Option3" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Poll_FF_Vote" Member="FF_Votes" OtherKey="QuestionID" Type="FF_Vote" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Roles" Member="FF_Roles">
+    <Type Name="FF_Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleType" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="FF_Role_FF_User" Member="FF_Users" OtherKey="RoleTypeID" Type="FF_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Season" Member="FF_Seasons">
+    <Type Name="FF_Season">
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsCurrent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Season_FF_ChampionsGroupStage" Member="FF_ChampionsGroupStages" OtherKey="SeasonID" Type="FF_ChampionsGroupStage" />
+      <Association Name="FF_Season_FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables" OtherKey="SeasonID" Type="FF_ChampionsLeagueTable" />
+      <Association Name="FF_Season_FF_ChampionsOtherStage" Member="FF_ChampionsOtherStages" OtherKey="SeasonID" Type="FF_ChampionsOtherStage" />
+      <Association Name="FF_Season_FF_LeagueTable" Member="FF_LeagueTables" OtherKey="SeasonID" Type="FF_LeagueTable" />
+      <Association Name="FF_Season_FF_Match" Member="FF_Matches" OtherKey="SeasonID" Type="FF_Match" />
+      <Association Name="FF_Season_FF_New" Member="FF_News" OtherKey="SeasonID" Type="FF_New" />
+      <Association Name="FF_Season_FF_TopScorer" Member="FF_TopScorers" OtherKey="SeasonID" Type="FF_TopScorer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Teams" Member="FF_Teams">
+    <Type Name="FF_Team">
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LogoURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="FF_Team_FF_ChampionGoalScorer" Member="FF_ChampionGoalScorers" OtherKey="TeamID" Type="FF_ChampionGoalScorer" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage" Member="FF_ChampionsGroupStages" OtherKey="Team1ID" Type="FF_ChampionsGroupStage" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage1" Member="FF_ChampionsGroupStages1" OtherKey="Team2ID" Type="FF_ChampionsGroupStage" />
+      <Association Name="FF_Team_FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables" OtherKey="TeamID" Type="FF_ChampionsLeagueTable" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage" Member="FF_ChampionsOtherStages" OtherKey="Team1ID" Type="FF_ChampionsOtherStage" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage1" Member="FF_ChampionsOtherStages1" OtherKey="Team2ID" Type="FF_ChampionsOtherStage" />
+      <Association Name="FF_Team_FF_GoalScorer" Member="FF_GoalScorers" OtherKey="TeamID" Type="FF_GoalScorer" />
+      <Association Name="FF_Team_FF_LeagueTable" Member="FF_LeagueTables" OtherKey="TeamID" Type="FF_LeagueTable" />
+      <Association Name="FF_Team_FF_Match" Member="FF_Matches" OtherKey="Team1ID" Type="FF_Match" />
+      <Association Name="FF_Team_FF_Match1" Member="FF_Matches1" OtherKey="Team2ID" Type="FF_Match" />
+      <Association Name="FF_League_FF_Team" Member="FF_League" ThisKey="LeagueID" Type="FF_League" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_TopScorers" Member="FF_TopScorers">
+    <Type Name="FF_TopScorer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Goals" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsCurrent" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Week" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FF_League_FF_TopScorer" Member="FF_League" ThisKey="LeagueID" Type="FF_League" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="FF_Season_FF_TopScorer" Member="FF_Season" ThisKey="SeasonID" Type="FF_Season" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_User" Member="FF_Users">
+    <Type Name="FF_User">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="FF_User_FF_Article" Member="FF_Articles" OtherKey="UserID" Type="FF_Article" />
+      <Association Name="FF_User_FF_UserComment" Member="FF_UserComments" OtherKey="UserID" Type="FF_UserComment" />
+      <Association Name="FF_Role_FF_User" Member="FF_Role" ThisKey="RoleTypeID" Type="FF_Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_UserComment" Member="FF_UserComments">
+    <Type Name="FF_UserComment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CommentID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Comment_FF_UserComment" Member="FF_Comment" ThisKey="CommentID" Type="FF_Comment" IsForeignKey="true" />
+      <Association Name="FF_User_FF_UserComment" Member="FF_User" ThisKey="UserID" Type="FF_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_UserComment2" Member="FF_UserComment2s">
+    <Type Name="FF_UserComment2">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommentID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Comment_FF_UserComment2" Member="FF_Comment" ThisKey="CommentID" Type="FF_Comment" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageSPL.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" language="javascript">
+        $(function(){
+            $(".hover1").hover( 
+                function(){
+                    $(".genHover").hide();
+                    $("#EUsubMenu").removeClass("hide");
+                    $("#EUsubMenu").addClass("subMenu1"); 
+                    $("#EUsubMenu").show();                   
+                }            
+            );
+            $("#EUsubMenu").hover( 
+                function(){}, 
+                function(){
+                    $("#EUsubMenu").removeClass("subMenu1");
+                    $("#EUsubMenu").addClass("hide");
+                    $("#EUsubMenu").hide();
+                
+                }
+            
+            );
+            
+            
+            $(".hover2").hover( 
+                function(){
+                    $(".genHover").hide();
+                    $("#AFsubMenu").removeClass("hide");
+                    $("#AFsubMenu").addClass("subMenu1");  
+                    $("#AFsubMenu").show();                    
+                }            
+            );
+            $("#AFsubMenu").hover( 
+                function(){}, 
+                function(){
+                    $("#AFsubMenu").removeClass("subMenu1");
+                    $("#AFsubMenu").addClass("hide");
+                    $("#AFsubMenu").hide();
+                
+                }
+            
+            );
+        
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container">
+        
+        <div id="logo">
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" 
+            ImageUrl="~/images/logo.png">logo</asp:HyperLink>            
+        </div>
+        <div id="header">
+            <div id="menu" style=" float:right; margin-right:10px;">
+                <asp:HyperLink ID="HyperLink2" runat="server" ImageUrl="~/images/btnHome.jpg" 
+                NavigateUrl="Default.aspx"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server" ImageUrl="~/images/btnNews.jpg" 
+                NavigateUrl="News.aspx"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink4" runat="server" ImageUrl="~/images/btnEULeagues.jpg" CssClass="hover1"
+                 NavigateUrl="#"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink5" runat="server" ImageUrl="~/images/btnAFLeagues.jpg" CssClass="hover2"
+                 NavigateUrl="#"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink6" runat="server" ImageUrl="~/images/btnArticles.jpg"
+                 NavigateUrl="Articles.aspx"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink7" runat="server" ImageUrl="~/images/btnForum.jpg"
+                 NavigateUrl="Forum.aspx"></asp:HyperLink>
+            </div>
+            
+            <div id="EUsubMenu" class="hide genHover" >
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="EPL.aspx">English Premier League</asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="SPL.aspx">Spanish La Liga</asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="IPL.aspx">Italian Serie A</asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="GPL.aspx">German Bundesliga</asp:HyperLink>
+            </div>
+            
+            <div id="AFsubMenu" class="hide genHover" >
+                    <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="SAPL.aspx">South African Premier League</asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="NPL.aspx">Nigerian Premier League</asp:HyperLink>                    
+            </div>
+            
+            
+            <div id="GenSubMenu" class="subMenu2" style="" >
+                HOW DO YOU FEEL ABOUT FOOTBALL?
+            </div>
+        </div>
+        
+        <div id="content1" style="">
+        
+            <div id="contentSPL" style="">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                
+                </asp:ContentPlaceHolder>
+             <br /><br /><br />
+             </div>
+            
+            <div style="padding-top:43px;">
+                <div id="side1" style="">
+                </div>
+                
+                <div id="contentPanel" style=""></div>
+                
+                <div id="side2" style="">
+                </div>
+            </div>
+        </div>
+        
+        
+    <div>
+    </div>
+    </div>
+    
+    </form>
+</body>
+</html>

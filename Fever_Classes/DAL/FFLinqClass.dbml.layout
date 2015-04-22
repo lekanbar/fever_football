@@ -1,0 +1,1168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 31.5, 50.5" name="FFLinqClass">
+  <DataContextMoniker Name="/FFLinqClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="63d8e835-7e54-403d-92f3-f045a278da0c" absoluteBounds="12, 42.875, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Article" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14c396b2-ea8c-4a32-88b9-6472ff170a00" absoluteBounds="12.015, 43.335, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42d71eaa-7d16-4dde-847e-f65f0e08bfd4" absoluteBounds="26.5, 39.625, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_WatchTopic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e556ba03-6f58-4c0b-9fa2-d46bccb08f4a" absoluteBounds="26.515, 40.085, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="699983b8-eaab-4b4d-bb8b-e1bb23ed1ef5" absoluteBounds="23.75, 13.875, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Assist" />
+      <nestedChildShapes>
+        <elementListCompartment Id="239406be-2301-425f-ab83-11686fc97512" absoluteBounds="23.765, 14.335, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="410413bc-ddc5-47d3-9c0c-3e8116ea2b74" absoluteBounds="15.25, 15.75, 2, 1.5331902753313376">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_ChampionGoalScorer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de777de8-39ca-466d-8519-1ed24f5d0fce" absoluteBounds="15.265, 16.21, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ecee9d1-9f92-442f-ab00-c76cb7389229" absoluteBounds="18.25, 14.875, 2, 3.0905022373795532">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_ChampionsGroupStage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c78b9b30-3a6c-4694-9127-f7a015798f2b" absoluteBounds="18.265, 15.335, 1.9700000000000002, 2.5305022373795509" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8b90c36-0276-449a-bb22-35a6f6519c68" absoluteBounds="15.25, 18.125, 2, 2.6233086487650894">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_ChampionsLeagueTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe32a4b2-1160-4a0d-a2b0-d632113c5aab" absoluteBounds="15.265, 18.585, 1.9700000000000002, 2.0633086487650871" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be8e1a4c-8dc5-4ae2-9bae-27c51e5305ba" absoluteBounds="12.5, 22, 2, 1.065996686716872">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_ChampionsLegaueGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf83dcf3-f3a9-4e13-b94a-affc56425edf" absoluteBounds="12.515, 22.46, 1.9700000000000002, 0.50599668671687437" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="393ad856-8933-4b0d-a635-12f0be27a2fb" absoluteBounds="18.25, 10.75, 2, 3.401964629789191">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_ChampionsOtherStage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="071ca72c-92b8-48bd-b37a-f2bf91734007" absoluteBounds="18.265, 11.21, 1.9700000000000002, 2.8419646297891932" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56c422f4-7d6d-4ba2-b4bd-7cb140f20e87" absoluteBounds="12.25, 33.125, 2, 1.3774590791265098">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1aedceb-6a37-40cd-ae4f-d4eebbf396a9" absoluteBounds="12.265, 33.585, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7411745-2aac-4291-81ed-54f6af054ea5" absoluteBounds="6.75, 0.75, 2, 1.2217278829216958">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_CommentSubscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2e3d92c-d39b-44ab-8874-1d02c8ddddbe" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c165583-b6de-47bf-961c-7f2f8619bb20" absoluteBounds="23.75, 16.625, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_GoalScorer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef229b5f-3b72-444d-9cab-b5a82fcbb2ca" absoluteBounds="23.765, 17.085, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3deabf75-8fb2-4d71-aa36-e432c8f34201" absoluteBounds="9.75, 15.875, 2, 1.2217278829216962">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_League" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec02c113-484c-4cb1-a29e-96b622cce8fa" absoluteBounds="9.765, 16.335, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="baf97a36-65a3-4097-a179-cf5df23e1907" absoluteBounds="18.25, 19.125, 2, 2.6233086487650894">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_LeagueTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b90219ae-b599-4dfa-be91-aa2190767f71" absoluteBounds="18.265, 19.585, 1.9700000000000002, 2.0633086487650871" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" absoluteBounds="21, 13.5, 2, 2.7790398449699083">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Match" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c06585f6-7f92-4413-9177-464553e7c364" absoluteBounds="21.015, 13.96, 1.9700000000000002, 2.2190398449699082" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a7a1835-fe04-4419-a4d2-1ca371f6bdc4" absoluteBounds="12.5, 12.5, 2, 1.8446526677409807">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_New" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e95a250d-3593-4002-b9e8-18400c688795" absoluteBounds="12.515, 12.96, 1.9700000000000002, 1.2846526677409806" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40004e67-1ff9-4571-b7e5-a2927d8e49a6" absoluteBounds="12.5, 10, 2, 1.0659966867168755">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Player" />
+      <nestedChildShapes>
+        <elementListCompartment Id="978052a2-41d5-430c-a349-c10dbd170adc" absoluteBounds="12.515, 10.46, 1.9700000000000002, 0.50599668671687437" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63c83e1f-5db7-4c9f-acba-0b76509be5a4" absoluteBounds="0.75, 6.75, 2, 1.0659966867168755">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_PlayerStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ad84d61-3d60-402c-aeb6-3a551796156a" absoluteBounds="0.765, 7.21, 1.9700000000000002, 0.50599668671687437" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c801fce6-abfc-4e26-8aa9-8382acca5b8e" absoluteBounds="0.75, 3.875, 2, 1.8446526677409807">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Poll" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8db3f55b-dc38-4fa1-8903-348f3d81207e" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.2846526677409806" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16b5479c-2dcb-4f24-a27e-661e398250a5" absoluteBounds="9.75, 12.875, 2, 1.2217278829216944">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Season" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d2b5e98-221d-4798-b4c9-44f61a2d9e04" absoluteBounds="9.765, 13.335, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7beb741d-1e89-47ca-bd0d-ea5897b10bd6" absoluteBounds="15.25, 12.75, 2, 1.5331902753313393">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_TeamPlayer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa6714b9-9ab4-47b6-8663-8077dd8b2769" absoluteBounds="15.265, 13.21, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" absoluteBounds="12.5, 15.75, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75afef08-2f12-4073-b34a-4f9220aec00f" absoluteBounds="12.515, 16.21, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e96aaa4e-6754-4f70-885a-ba6a15c956be" absoluteBounds="12.5, 18.375, 2, 2.1561150601506256">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_TopScorer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc100923-4a55-437c-a318-8070910a0a22" absoluteBounds="12.515, 18.835, 1.9700000000000002, 1.5961150601506233" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d31275a-4dea-451b-af8a-a1739ad32d04" absoluteBounds="15, 40.25, 2, 1.221727882921698">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_UserComment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50a3c081-898e-47ca-aed8-cd33e7046082" absoluteBounds="15.015, 40.71, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66b4f1a1-3708-437c-92b9-1cde6bb52083" absoluteBounds="15, 32.125, 2, 1.3774590791265098">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_UserComment2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fefaa58d-0f26-45db-9ca1-69c84535e52d" absoluteBounds="15.015, 32.585, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b05fca30-f8ee-488a-bed8-84c2ebf2b86e" absoluteBounds="3.5, 4.125, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/FF_Vote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd187dc2-c179-4101-9c73-c2035ce926cc" absoluteBounds="3.515, 4.585, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc78b40c-414f-4489-9dde-7ee65acd6819" absoluteBounds="3.5, 24.25, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_AccessMask" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e977560-6d82-4189-82c3-9f2019ae2801" absoluteBounds="3.515, 24.71, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ceae9f6e-d6c6-4244-9f0a-62ebdc8b1f9e" absoluteBounds="6.5, 26.875, 2, 2.7790398449699083">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Active" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b597aba-ff43-4071-9c6e-f800e40ea58f" absoluteBounds="6.515, 27.335, 1.9700000000000002, 2.2190398449699082" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0155d368-25c0-478b-8aa0-5973ded5c4cc" absoluteBounds="6.75, 2.75, 2, 3.4019646297891928">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_ActiveAccess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3dcd8583-1950-4c8e-b473-1259d687ea1d" absoluteBounds="6.765, 3.21, 1.9700000000000002, 2.8419646297891932" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3d777f2-d626-4361-b1b3-cb770772082d" absoluteBounds="29.25, 33.875, 2, 2.0003838639457996">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Attachment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e87d8fa-f9cb-4fc8-9aa0-ad504fc6042e" absoluteBounds="29.265, 34.335, 1.9700000000000002, 1.440383863945802" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d334672e-0523-41f5-bd7d-bdedb0a5e32d" absoluteBounds="3.5, 26.5, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_BannedIP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bdb96658-8594-4fe6-a7e9-d6f13fd5cc8c" absoluteBounds="3.515, 26.96, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="151e7668-8f5b-43e1-981b-579e3c137dd8" absoluteBounds="3.5, 43.5, 2, 2.9347710411747272">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_BBCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="239414cb-7900-462c-b5f3-c6d67a3f0282" absoluteBounds="3.515, 43.96, 1.9700000000000002, 2.3747710411747294" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" absoluteBounds="0.75, 31.375, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Board" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62a7962a-3f2f-4252-830f-022d3588ce89" absoluteBounds="0.765, 31.835, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="630a9a7e-8cdc-4a0e-9417-a840370ad539" absoluteBounds="12, 36.125, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Buddy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0b8a190-8e82-4b51-aba3-9fb80ab5ec6e" absoluteBounds="12.015, 36.585, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0de73bf-9afe-42c4-952a-f97d8e27e7ff" absoluteBounds="6.5, 30.375, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e75ad9ac-0523-47dd-a1ea-ce427b914b3c" absoluteBounds="6.515, 30.835, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c999b143-e051-44bf-82d4-c0f2b069cd78" absoluteBounds="12, 38.375, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_CheckEmail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ff44b70-eda3-4ea6-83e3-fe1e6e326f14" absoluteBounds="12.015, 38.835, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9042f5e5-3103-49cf-b55d-1b645dffc97f" absoluteBounds="9.25, 47.5, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Choice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae3b8443-a9d2-4f95-be02-05c4002d79b4" absoluteBounds="9.265, 47.96, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8663a19-64e1-4a22-8ee8-55ea75d5e9ea" absoluteBounds="12, 45.375, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_EventLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="992e7b00-b065-435b-a2bd-b5095d0c0ff0" absoluteBounds="12.015, 45.835, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="137337dc-86a7-44fe-8590-8a11c95e1d8a" absoluteBounds="3.5, 20.125, 2, 1.221727882921698">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Extension" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d6474e9-71a1-47ba-a079-9722b6bbdb53" absoluteBounds="3.515, 20.585, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d12fd1b2-cef9-4cac-bcdb-eca7e44360be" absoluteBounds="23.5, 40.75, 2, 1.221727882921698">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_FavoriteTopic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b94768b-c772-431d-9c5b-46669c2bfb6e" absoluteBounds="23.515, 41.21, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" absoluteBounds="15, 34.75, 2, 4.4920830032229446">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Forum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ea38e66-f2c8-4f49-8400-f915999c7879" absoluteBounds="15.015, 35.21, 1.9700000000000002, 3.9320830032229424" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70a42c08-3e81-447b-b88b-20ec528dd475" absoluteBounds="6.25, 32.875, 2, 1.221727882921698">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_ForumAccess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d0812c4-7081-4578-b573-ffff4080dcea" absoluteBounds="6.265, 33.335, 1.9700000000000002, 0.66172788292169571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9702cd2a-5f1f-495e-bfa1-412444932158" absoluteBounds="3.5, 40, 2, 2.7790398449699012">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f959945f-26fb-43c1-bac2-d77b3830438b" absoluteBounds="3.515, 40.46, 1.9700000000000002, 2.2190398449699082" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="827dfbbe-6ca4-4446-9731-5d9ee7a6f56b" absoluteBounds="3.75, 7.75, 2, 1.6889214715361591">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_GroupMedal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6607ee44-7e9b-4b03-863b-5f71f8606df8" absoluteBounds="3.765, 8.21, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6271ae47-ff7b-4630-9ef7-d5245ee44a8f" absoluteBounds="6.75, 7.75, 2, 1.0659966867168755">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_IgnoreUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adbfcff5-3c68-49a7-83f0-e956ce651afd" absoluteBounds="6.765, 8.21, 1.9700000000000002, 0.50599668671687437" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c9e15f3-8ec7-4934-b10a-3967234356e2" absoluteBounds="9.75, 0.75, 2, 2.6233086487650876">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Mail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99ed5ee4-2941-47df-b5e2-28598a5bbb72" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.0633086487650871" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e32f146-d89d-4195-a7fe-0fc8b05b21dc" absoluteBounds="9.75, 4.75, 2, 3.2462334335843721">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Medal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95de9162-a630-4d15-941b-6b38cc5138d1" absoluteBounds="9.765, 5.21, 1.9700000000000002, 2.6862334335843721" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51bf78ae-3c66-4465-99bc-28c8714a3887" absoluteBounds="26.5, 34.5, 2, 3.7134270221988288">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea0a3b3c-d56f-4719-87b4-d4f5ec54f8e7" absoluteBounds="26.515, 34.96, 1.9700000000000002, 3.1534270221988359" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30ccc8c3-af64-4351-8ae5-5106e22530c7" absoluteBounds="29.25, 36.625, 2, 2.1561150601506256">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_MessageHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f276e30d-9bca-4b17-b7b6-0f1f36358495" absoluteBounds="29.265, 37.085, 1.9700000000000002, 1.5961150601506233" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f75ab2cf-794f-4b5d-b07e-4bf18e4ba4df" absoluteBounds="6.75, 9.75, 2, 1.5331902753313393">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_MessageReported" />
+      <nestedChildShapes>
+        <elementListCompartment Id="114095ca-488c-4c88-999e-a871de882694" absoluteBounds="6.765, 10.21, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03621be0-2077-43b3-9b80-c65f8836870c" absoluteBounds="0.75, 10.75, 2, 1.6889214715361582">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_MessageReportedAudit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf1a8e2b-7be7-47a3-8733-fc25e343f742" absoluteBounds="0.765, 11.21, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e72fa086-2822-4cf7-aa73-98284da60d65" absoluteBounds="17.75, 35.625, 2, 1.8446526677409878">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_NntpForum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85124c82-12b4-4704-aee5-83499606b0bd" absoluteBounds="17.765, 36.085, 1.9700000000000002, 1.2846526677409806" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd0fd292-2520-40e2-a5b7-8f6558ef0812" absoluteBounds="3.5, 33.875, 2, 1.8446526677409736">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_NntpServer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e407be4-d638-4c58-b2aa-b062998ee573" absoluteBounds="3.515, 34.335, 1.9700000000000002, 1.2846526677409806" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd4d4ccb-e51f-4bcc-a51f-5ce779520661" absoluteBounds="23.5, 37.75, 2, 1.3774590791265098">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_NntpTopic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c038463-a885-450d-b198-54b8f7edd5a1" absoluteBounds="23.515, 38.21, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5a7da94-d479-4376-82c4-9553d7535ef0" absoluteBounds="12, 47.75, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_PMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73f2e333-2bf0-46c5-84dd-d89c418f738d" absoluteBounds="12.015, 48.21, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="addddb87-94ef-4d8b-a533-be8e913d4146" absoluteBounds="6.5, 45.875, 2, 2.6233086487650894">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Poll" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbc3eab5-0d23-43a6-b75b-3025beac312f" absoluteBounds="6.515, 46.335, 1.9700000000000002, 2.0633086487650871" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae55f0bf-248d-4139-9358-9795f140254e" absoluteBounds="3.75, 36.5, 2, 1.3774590791265098">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_PollGroupCluster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11c05333-6b16-4116-ac0b-bc5e0ba72c11" absoluteBounds="3.765, 36.96, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="874cc2bb-a545-4720-b942-b1dcc0964929" absoluteBounds="9.25, 45.25, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_PollVote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6a94a16-27cf-4d4e-8b42-9e2e49db0cc4" absoluteBounds="9.265, 45.71, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e99ac77-77d0-479b-9614-86c7e12b080b" absoluteBounds="12.75, 0.75, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_prov_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecdaf294-bfa4-4ab7-b4e0-e08fdc0919da" absoluteBounds="12.765, 1.21, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="178705df-ab65-405f-8e2a-1480b56e8100" absoluteBounds="12.75, 3.75, 2, 4.3363518070181195">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_prov_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66020b65-3ade-489e-a8df-d452fdd2833b" absoluteBounds="12.765, 4.21, 1.9700000000000002, 3.7763518070181208" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc220f5a-c532-4c4d-88d0-e99135e7e077" absoluteBounds="3.75, 12.75, 2, 3.8691582184036548">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_prov_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d549d45d-fd11-4c1c-813f-66936facaee9" absoluteBounds="3.765, 13.21, 1.9700000000000002, 3.309158218403657" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6485a5fe-ebe9-4ce0-8d62-20d8c25f08ad" absoluteBounds="15.75, 0.75, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_prov_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92cd63c6-1474-4848-985f-659e664cdefd" absoluteBounds="15.765, 1.21, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d34037b9-ea25-4f70-a491-f55802b26cf7" absoluteBounds="15.75, 3.75, 2, 1.0659966867168751">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_prov_RoleMembership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe6a8f54-5663-4419-9e09-8793b3385dca" absoluteBounds="15.765, 4.21, 1.9700000000000002, 0.50599668671687437" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69edce9f-a4b8-4441-9df0-5c27ba2afe53" absoluteBounds="3.5, 47.125, 2, 3.0905022373795532">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Rank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93d09a30-10c3-4b21-93a1-223863e9734f" absoluteBounds="3.515, 47.585, 1.9700000000000002, 2.5305022373795509" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5a8b837-7272-4f46-a5bd-167b8961e69e" absoluteBounds="3.5, 22.125, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Registry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="279bc252-9c40-4967-acd8-b00e81b7d896" absoluteBounds="3.515, 22.585, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cecb3a44-385f-488e-90ec-086c1c621def" absoluteBounds="15.75, 5.75, 2, 1.3774590791265169">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Replace_Word" />
+      <nestedChildShapes>
+        <elementListCompartment Id="356b1fef-8663-412a-8194-dea7ad3069b2" absoluteBounds="15.765, 6.21, 1.9700000000000002, 0.817459079126517" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a133dabe-03fb-43fd-92b6-f3f7edf2ea8a" absoluteBounds="18.75, 0.75, 2, 1.8446526677409807">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_ShoutboxMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b59623c3-c135-4ead-907e-96e3d99e69cc" absoluteBounds="18.765, 1.21, 1.9700000000000002, 1.2846526677409806" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c836200e-b387-464c-bd3e-90a3e7884467" absoluteBounds="3.5, 31.375, 2, 1.6889214715361618">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Smiley" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a0532b7-0745-4802-ad3d-cb58b058a263" absoluteBounds="3.515, 31.835, 1.9700000000000002, 1.1289214715361595" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e4ececf-dd57-4855-a3b4-6e2d67b9de69" absoluteBounds="12, 40.625, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Thank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7812e31-853e-4075-9032-ba6a7323bb4d" absoluteBounds="12.015, 41.085, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b621555-0a3d-4190-afec-38fb39bc3be6" absoluteBounds="20.75, 37.125, 2, 4.0248894146084808">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_Topic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e630e061-ad10-4730-99e6-3c71e49067ce" absoluteBounds="20.765, 37.585, 1.9700000000000002, 3.4648894146084785" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3853a390-25b2-42dd-ba73-ade1be46959b" absoluteBounds="9.25, 38, 2, 5.582201376656684">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efc93b89-b677-476a-92c9-2c3136c74841" absoluteBounds="9.265, 38.46, 1.9700000000000002, 5.0222013766566906" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33b96d61-b663-4749-a1be-df62fc26489d" absoluteBounds="0.75, 1.125, 2, 1.5331902753313382">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_UserAlbum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a8a350d-9289-4d21-a50e-c21af49c786f" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e804a130-d924-4446-bee6-355eb76e822e" absoluteBounds="3.5, 0.875, 2, 2.0003838639458023">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_UserAlbumImage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7136f91-6517-40bf-97e7-cf5916b9ace8" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.440383863945802" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19ef5e2b-0f06-48aa-9adc-978e07cb261b" absoluteBounds="6.25, 24.25, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_UserForum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b851a8f0-b806-4302-9b97-bdddc4b7ab3a" absoluteBounds="6.265, 24.71, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55b02202-86ae-41c0-9d30-c7c638aac8fe" absoluteBounds="6.25, 40.75, 2, 1.065996686716872">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_UserGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8621040-992a-4be8-baa4-3003c65030ac" absoluteBounds="6.265, 41.21, 1.9700000000000002, 0.50599668671687437" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6da87123-8bd3-4de7-b337-394df7c2697d" absoluteBounds="18.75, 3.75, 2, 1.8446526677409807">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_UserMedal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8879a0a2-7731-4db7-aabe-5481a65b9314" absoluteBounds="18.765, 4.21, 1.9700000000000002, 1.2846526677409806" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe67ebc9-1305-4d68-b44d-ae1dd2122a81" absoluteBounds="14.75, 42.75, 2, 2.0003838639457996">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_UserPMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="075705a0-0394-4837-bdfd-b380feaff6d3" absoluteBounds="14.765, 43.21, 1.9700000000000002, 1.440383863945802" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d475910-7c93-4a0c-86ca-be6a635214bc" absoluteBounds="17.75, 38.375, 2, 1.5331902753313358">
+      <DataClassMoniker Name="/FFLinqClassDataContext/yaf_WatchForum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26ca9914-c997-4eee-bc0a-6d6c93a5ff65" absoluteBounds="17.765, 38.835, 1.9700000000000002, 0.97319027533133817" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(18.25 : 16.5165951376657); (18.0833333333333 : 16.5165951376657 : JumpStart); (17.9166666666667 : 16.5165951376657 : JumpEnd); (17.25 : 16.5165951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_ChampionsGroupStage/FF_ChampionsGroupStage_FF_ChampionGoalScorer" />
+      <nodes>
+        <classShapeMoniker Id="4ecee9d1-9f92-442f-ab00-c76cb7389229" />
+        <classShapeMoniker Id="410413bc-ddc5-47d3-9c0c-3e8116ea2b74" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 22.5329983433584); (16.25 : 22.5329983433584); (16.25 : 20.7483086487651)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_ChampionsLegaueGroup/FF_ChampionsLegaueGroup_FF_ChampionsLeagueTable" />
+      <nodes>
+        <classShapeMoniker Id="be8e1a4c-8dc5-4ae2-9bae-27c51e5305ba" />
+        <classShapeMoniker Id="f8b90c36-0276-449a-bb22-35a6f6519c68" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(24.75 : 16.625); (24.75 : 15.2524590791265)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_GoalScorer/FF_GoalScorer_FF_Assist" />
+      <nodes>
+        <classShapeMoniker Id="6c165583-b6de-47bf-961c-7f2f8619bb20" />
+        <classShapeMoniker Id="699983b8-eaab-4b4d-bb8b-e1bb23ed1ef5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 17.0967278829217); (10.75 : 21.2795586487651); (16.1666666666667 : 21.2795586487651 : JumpStart); (16.3333333333333 : 21.2795586487651 : JumpEnd); (18.25 : 21.2795586487651)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_League/FF_League_FF_LeagueTable" />
+      <nodes>
+        <classShapeMoniker Id="3deabf75-8fb2-4d71-aa36-e432c8f34201" />
+        <classShapeMoniker Id="baf97a36-65a3-4097-a179-cf5df23e1907" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23 : 14.5637295395633); (23.75 : 14.5637295395633)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Match/FF_Match_FF_Assist" />
+      <nodes>
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+        <classShapeMoniker Id="699983b8-eaab-4b4d-bb8b-e1bb23ed1ef5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22 : 16.2790398449699); (22 : 17.3915951376657); (23.75 : 17.3915951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Match/FF_Match_FF_GoalScorer" />
+      <nodes>
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+        <classShapeMoniker Id="6c165583-b6de-47bf-961c-7f2f8619bb20" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 15.875); (10.75 : 14.625); (11.1666661666667 : 14.625 : JumpStart); (11.3333328333333 : 14.625 : JumpEnd); (11.9166666666667 : 14.625 : JumpStart); (12.2083333333333 : 14.625 : JumpEnd); (12.2156151786867 : 14.625 : JumpStart); (12.3822818453534 : 14.625 : JumpEnd); (14.7916666666667 : 14.625 : JumpStart); (15.1145833333333 : 14.625 : JumpEnd); (19.1666666666667 : 14.625 : JumpStart); (19.3333333333333 : 14.625 : JumpEnd); (20.625 : 14.625); (20.625 : 14.889519922485); (20.6666666666667 : 14.889519922485 : JumpStart); (20.9583333333333 : 14.889519922485 : JumpEnd); (21 : 14.889519922485)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_League/FF_League_FF_Match" />
+      <nodes>
+        <classShapeMoniker Id="3deabf75-8fb2-4d71-aa36-e432c8f34201" />
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 15.875); (12.125 : 15.5); (12.125 : 13.4223263338705); (12.5 : 13.4223263338705)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_League/FF_League_FF_New" />
+      <nodes>
+        <classShapeMoniker Id="3deabf75-8fb2-4d71-aa36-e432c8f34201" />
+        <classShapeMoniker Id="0a7a1835-fe04-4419-a4d2-1ca371f6bdc4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 13.7595266083961); (11.9166666666667 : 13.7595266083961 : JumpStart); (12.2083333333333 : 13.7595266083961 : JumpEnd); (12.25 : 13.7595266083961); (12.25 : 14.469652667741); (14.7916666666667 : 14.469652667741 : JumpStart); (15.1145833333333 : 14.469652667741 : JumpEnd); (16.1666666666667 : 14.469652667741 : JumpStart); (16.3333333333333 : 14.469652667741 : JumpEnd); (16.6979186666667 : 14.469652667741 : JumpStart); (16.8645853333333 : 14.469652667741 : JumpEnd); (19.25 : 14.469652667741); (19.25 : 14.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_ChampionsGroupStage" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="4ecee9d1-9f92-442f-ab00-c76cb7389229" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 14.0760514879799); (11.9410744349011 : 14.2671259228811 : JumpStart); (12.0589255650989 : 14.3849770530788 : JumpEnd); (12.0660744349011 : 14.3921259228811 : JumpStart); (12.1839255650989 : 14.5099770530788 : JumpEnd); (12.40625 : 14.7323014879799); (12.40625 : 17.75); (12.8854141666667 : 17.75 : JumpStart); (13.0520808333333 : 17.75 : JumpEnd); (13.9479191666667 : 17.75 : JumpStart); (14.1145858333333 : 17.75 : JumpEnd); (14.875 : 17.75); (15.25 : 18.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_ChampionsLeagueTable" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="f8b90c36-0276-449a-bb22-35a6f6519c68" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 12.875); (10.75 : 11.7829983433584); (14.7916666666667 : 11.7829983433584 : JumpStart); (15.1145833333333 : 11.7829983433584 : JumpEnd); (16.1666666666667 : 11.7829983433584 : JumpStart); (16.3333333333333 : 11.7829983433584 : JumpEnd); (18.25 : 11.7829983433584)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_ChampionsOtherStage" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="393ad856-8933-4b0d-a635-12f0be27a2fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 13.1486636669352); (12 : 13.1486636669352); (12 : 14.875); (12.0416666666667 : 14.875 : JumpStart); (12.2083333333333 : 14.875 : JumpEnd); (12.2604166666667 : 14.875 : JumpStart); (12.4895833333333 : 14.875 : JumpEnd); (13.8843522201311 : 14.875 : JumpStart); (14.0510188867978 : 14.875 : JumpEnd); (14.7916666666667 : 14.875 : JumpStart); (15.1145833333333 : 14.875 : JumpEnd); (18 : 14.875); (18 : 18.75); (18.6354146666667 : 18.75 : JumpStart); (18.8020813333333 : 18.75 : JumpEnd); (19.25 : 18.75); (19.25 : 19.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_LeagueTable" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="baf97a36-65a3-4097-a179-cf5df23e1907" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.2499995 : 14.0967278829217); (11.2499995 : 14.75); (11.9166666666667 : 14.75 : JumpStart); (12.2083333333333 : 14.75 : JumpEnd); (13.8843522201311 : 14.75 : JumpStart); (14.0510188867978 : 14.75 : JumpEnd); (14.7916666666667 : 14.75 : JumpStart); (15.1145833333333 : 14.75 : JumpEnd); (19.1666666666667 : 14.75 : JumpStart); (19.3333333333333 : 14.75 : JumpEnd); (20.5416666666667 : 14.75 : JumpStart); (20.7083333333333 : 14.75 : JumpEnd); (20.75 : 14.75); (20.75 : 15.6155318837274); (21 : 15.6155318837274)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_Match" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 12.9493318334676); (12.5 : 12.9493318334676)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_New" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="0a7a1835-fe04-4419-a4d2-1ca371f6bdc4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 13.5165951376657); (18 : 13.5165951376657); (18 : 14.2769646297892); (20.4166666666667 : 14.2769646297892 : JumpStart); (20.5833333333333 : 14.2769646297892 : JumpEnd); (20.75 : 14.2769646297892); (20.75 : 13.25); (24.75 : 13.25); (24.75 : 13.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_TeamPlayer/FF_TeamPlayer_FF_Assist" />
+      <nodes>
+        <classShapeMoniker Id="7beb741d-1e89-47ca-bd0d-ea5897b10bd6" />
+        <classShapeMoniker Id="699983b8-eaab-4b4d-bb8b-e1bb23ed1ef5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.25 : 14.2831902753313); (16.25 : 14.6875); (19.1666666666667 : 14.6875 : JumpStart); (19.3333333333333 : 14.6875 : JumpEnd); (20.5 : 14.6875); (20.5 : 13.8884828148946); (20.6666666666667 : 13.8884828148946 : JumpStart); (20.8333333333333 : 13.8884828148946 : JumpEnd); (21 : 13.8884828148946)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_TeamPlayer/FF_TeamPlayer_FF_Match" />
+      <nodes>
+        <classShapeMoniker Id="7beb741d-1e89-47ca-bd0d-ea5897b10bd6" />
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.781252 : 14.2831902753313); (16.781252 : 14.5625); (19.1666666666667 : 14.5625 : JumpStart); (19.3333333333333 : 14.5625 : JumpEnd); (20.4166666666667 : 14.5625 : JumpStart); (20.5833333333333 : 14.5625 : JumpEnd); (20.6041666666667 : 14.5625 : JumpStart); (20.7708333333333 : 14.5625 : JumpEnd); (20.875 : 14.5625); (20.875 : 15.2525259031062); (21 : 15.2525259031062)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_TeamPlayer/FF_TeamPlayer_FF_Match1" />
+      <nodes>
+        <classShapeMoniker Id="7beb741d-1e89-47ca-bd0d-ea5897b10bd6" />
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 10.5329983433584); (16.25 : 10.5329983433584); (16.25 : 12.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Player/FF_Player_FF_TeamPlayer" />
+      <nodes>
+        <classShapeMoniker Id="40004e67-1ff9-4571-b7e5-a2927d8e49a6" />
+        <classShapeMoniker Id="7beb741d-1e89-47ca-bd0d-ea5897b10bd6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 16.4387295395633); (15.25 : 16.4387295395633)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_ChampionGoalScorer" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="410413bc-ddc5-47d3-9c0c-3e8116ea2b74" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 17.1274590791265); (13.5 : 17.5478451376657); (13.9479191666667 : 17.5478451376657 : JumpStart); (14.1145858333333 : 17.5478451376657 : JumpEnd); (17.6666666666667 : 17.5478451376657 : JumpStart); (17.8333333333333 : 17.5478451376657 : JumpEnd); (17.9166666666667 : 17.5478451376657 : JumpStart); (18.0833333333333 : 17.5478451376657 : JumpEnd); (18.25 : 17.5478451376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_ChampionsGroupStage" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="4ecee9d1-9f92-442f-ab00-c76cb7389229" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.0312525 : 17.1274590791265); (14.0312525 : 17.8577511186898); (14.7916666666667 : 17.8577511186898 : JumpStart); (15.0660844520231 : 17.8577511186898 : JumpEnd); (17.6666666666667 : 17.8577511186898 : JumpStart); (17.8333333333333 : 17.8577511186898 : JumpEnd); (17.9166666666667 : 17.8577511186898 : JumpStart); (18.0833333333333 : 17.8577511186898 : JumpEnd); (18.25 : 17.8577511186898)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_ChampionsGroupStage1" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="4ecee9d1-9f92-442f-ab00-c76cb7389229" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 17.1274590791265); (14.875 : 17.5024590791265); (14.875 : 19.4679063243825); (15.25 : 19.4679063243825)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_ChampionsLeagueTable" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="f8b90c36-0276-449a-bb22-35a6f6519c68" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 15.75); (15.03125 : 15.21875); (15.03125 : 11.2352471716792); (16.1666666666667 : 11.2352471716792 : JumpStart); (16.3333333333333 : 11.2352471716792 : JumpEnd); (18.25 : 11.2352471716792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_ChampionsOtherStage" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="393ad856-8933-4b0d-a635-12f0be27a2fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.4660933149753 : 15.75); (14.875 : 15.3410933149753); (14.875 : 11.2352471716792); (16.1666666666667 : 11.2352471716792 : JumpStart); (16.3333333333333 : 11.2352471716792 : JumpEnd); (18.25 : 11.2352471716792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_ChampionsOtherStage1" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="393ad856-8933-4b0d-a635-12f0be27a2fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.9687475 : 17.1274590791265); (12.9687475 : 18.0452511186898); (14.7916666666667 : 18.0452511186898 : JumpStart); (14.9583333333333 : 18.0452511186898 : JumpEnd); (15.0869177853564 : 18.0452511186898 : JumpStart); (15.2535844520231 : 18.0452511186898 : JumpEnd); (17.6666666666667 : 18.0452511186898 : JumpStart); (17.8333333333333 : 18.0452511186898 : JumpEnd); (17.9166666666667 : 18.0452511186898 : JumpStart); (18.0833333333333 : 18.0452511186898 : JumpEnd); (23.75 : 18.0452511186898)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_GoalScorer" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="6c165583-b6de-47bf-961c-7f2f8619bb20" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 16.7830943093449); (15 : 16.7830943093449); (15 : 17.4081902753313); (17.75 : 17.4081902753313); (17.75 : 18.4655022373796); (17.9166666666667 : 18.4655022373796 : JumpStart); (18.0833333333333 : 18.4655022373796 : JumpEnd); (18.718748 : 18.4655022373796); (18.718748 : 19.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_LeagueTable" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="baf97a36-65a3-4097-a179-cf5df23e1907" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.4576223689763 : 15.75); (13.4576223689763 : 14.8125); (13.8843522201311 : 14.8125 : JumpStart); (14.0510188867978 : 14.8125 : JumpEnd); (14.7916666666667 : 14.8125 : JumpStart); (15.1145833333333 : 14.8125 : JumpEnd); (20.375 : 14.8125); (20.375 : 15.9785378643487); (21 : 15.9785378643487)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_Match" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.9676855534644 : 15.75); (13.9676855534644 : 14.65625); (14.7916666666667 : 14.65625 : JumpStart); (15.1145833333333 : 14.65625 : JumpEnd); (19.1666666666667 : 14.65625 : JumpStart); (19.3333333333333 : 14.65625 : JumpEnd); (20.6875 : 14.65625); (20.6875 : 14.1139762223419); (21 : 14.1139762223419)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_Match1" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="17c9d999-6786-456f-b7d3-f0cbc8f01977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 15.8146336183282); (14.96875 : 15.3458836183282); (14.96875 : 13.5165951376657); (15.25 : 13.5165951376657)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Team/FF_Team_FF_TeamPlayer" />
+      <nodes>
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+        <classShapeMoniker Id="7beb741d-1e89-47ca-bd0d-ea5897b10bd6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 16.5171164414609); (12.2604166666667 : 16.5171164414609 : JumpStart); (12.4895833333333 : 16.5171164414609 : JumpEnd); (12.5 : 16.5171164414609)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_League/FF_League_FF_Team" />
+      <nodes>
+        <classShapeMoniker Id="3deabf75-8fb2-4d71-aa36-e432c8f34201" />
+        <classShapeMoniker Id="4ad4c3d5-9f96-4e76-b0c8-8d6ebbb292fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.2812525 : 17.0967278829217); (11.2812525 : 19.4530575300753); (12.5 : 19.4530575300753)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_League/FF_League_FF_TopScorer" />
+      <nodes>
+        <classShapeMoniker Id="3deabf75-8fb2-4d71-aa36-e432c8f34201" />
+        <classShapeMoniker Id="e96aaa4e-6754-4f70-885a-ba6a15c956be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 14.0854493947716); (11.9410744349011 : 14.2765238296728 : JumpStart); (12.0589255650989 : 14.3943749598705 : JumpEnd); (12.0660744349011 : 14.4015238296728 : JumpStart); (12.1839255650989 : 14.5193749598705 : JumpEnd); (12.34375 : 14.6791993947716); (12.34375 : 18.8827767650377); (12.5 : 18.8827767650377)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Season/FF_Season_FF_TopScorer" />
+      <nodes>
+        <classShapeMoniker Id="16b5479c-2dcb-4f24-a27e-661e398250a5" />
+        <classShapeMoniker Id="e96aaa4e-6754-4f70-885a-ba6a15c956be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.15625 : 34.5024590791265); (14.15625 : 40.40625); (15 : 40.40625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Comment/FF_Comment_FF_UserComment" />
+      <nodes>
+        <classShapeMoniker Id="56c422f4-7d6d-4ba2-b4bd-7cb140f20e87" />
+        <classShapeMoniker Id="3d31275a-4dea-451b-af8a-a1739ad32d04" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 33.3137295395633); (14.5416666666667 : 33.3137295395633 : JumpStart); (14.7083333333333 : 33.3137295395633 : JumpEnd); (14.7291666666667 : 33.3137295395633 : JumpStart); (14.8958333333333 : 33.3137295395633 : JumpEnd); (15 : 33.3137295395633)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Comment/FF_Comment_FF_UserComment2" />
+      <nodes>
+        <classShapeMoniker Id="56c422f4-7d6d-4ba2-b4bd-7cb140f20e87" />
+        <classShapeMoniker Id="66b4f1a1-3708-437c-92b9-1cde6bb52083" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.81372953956326); (3.5 : 4.81372953956326)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/FF_Poll/FF_Poll_FF_Vote" />
+      <nodes>
+        <classShapeMoniker Id="c801fce6-abfc-4e26-8aa9-8382acca5b8e" />
+        <classShapeMoniker Id="b05fca30-f8ee-488a-bed8-84c2ebf2b86e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 31.375); (1.75 : 25.0165951376657); (1.93229291666667 : 25.0165951376657 : JumpStart); (2.09895958333333 : 25.0165951376657 : JumpEnd); (3.5 : 25.0165951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_AccessMask" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="fc78b40c-414f-4489-9dde-7ee65acd6819" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 31.375); (2.2812525 : 28.952730658253); (5.79166666666667 : 28.952730658253 : JumpStart); (5.95833333333333 : 28.952730658253 : JumpEnd); (6.5 : 28.952730658253)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Active" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="ceae9f6e-d6c6-4244-9f0a-62ebdc8b1f9e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 31.375); (1.2187475 : 27.3444607357681); (1.40104041666667 : 27.3444607357681 : JumpStart); (1.56770708333333 : 27.3444607357681 : JumpEnd); (1.66666666666667 : 27.3444607357681 : JumpStart); (1.83333333333333 : 27.3444607357681 : JumpEnd); (1.93229291666667 : 27.3444607357681 : JumpStart); (2.09895958333333 : 27.3444607357681 : JumpEnd); (3.5 : 27.3444607357681)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_BannedIP" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="d334672e-0523-41f5-bd7d-bdedb0a5e32d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 33.0639214715362); (1.75 : 44.9673855205874); (2.46354541666667 : 44.9673855205874 : JumpStart); (2.63021208333333 : 44.9673855205874 : JumpEnd); (3.5 : 44.9673855205874)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_BBCode" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="151e7668-8f5b-43e1-981b-579e3c137dd8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 31.375); (2.54687875 : 30.8437475); (5.79166666666667 : 30.8437475 : JumpStart); (5.95833333333333 : 30.8437475 : JumpEnd); (6.5 : 30.8437475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Category" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="d0de73bf-9afe-42c4-952a-f97d8e27e7ff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.01562625 : 31.375); (2.01562625 : 20.7358639414608); (3.5 : 20.7358639414608)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Extension" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="137337dc-86a7-44fe-8590-8a11c95e1d8a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15 : 34.7823076923077); (14.625 : 34.4073076923077); (14.625 : 28.264519922485); (10.3333333333333 : 28.264519922485 : JumpStart); (10.1666666666667 : 28.264519922485 : JumpEnd); (9.53645458333333 : 28.264519922485 : JumpStart); (9.36978791666666 : 28.264519922485 : JumpEnd); (8.5 : 28.264519922485)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_Active" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="ceae9f6e-d6c6-4244-9f0a-62ebdc8b1f9e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 32.0639214715362); (8.40625 : 35.4375025); (9.36978791666666 : 35.4375025 : JumpStart); (9.53645458333333 : 35.4375025 : JumpEnd); (9.63541416666667 : 35.4375025 : JumpStart); (9.80208083333333 : 35.4375025 : JumpEnd); (10.1666666666667 : 35.4375025 : JumpStart); (10.3333333333333 : 35.4375025 : JumpEnd); (14.0729166666667 : 35.4375025 : JumpStart); (14.2395833333333 : 35.4375025 : JumpEnd); (15 : 35.4375025)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Category/yaf_Category_yaf_Forum" />
+      <nodes>
+        <classShapeMoniker Id="d0de73bf-9afe-42c4-952a-f97d8e27e7ff" />
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.7092307692308 : 39.2420830032229); (15.7092307692308 : 39.4920830032229); (16.3046153846154 : 39.4920830032229); (16.3046153846154 : 39.2420830032229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_Forum" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 25.7820098981965); (5.875 : 26.1570098981965); (5.875 : 33.4858639414608); (6.25 : 33.4858639414608)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_AccessMask/yaf_AccessMask_yaf_ForumAccess" />
+      <nodes>
+        <classShapeMoniker Id="fc78b40c-414f-4489-9dde-7ee65acd6819" />
+        <classShapeMoniker Id="70a42c08-3e81-447b-b88b-20ec528dd475" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15 : 35.09375125); (14.2395833333333 : 35.09375125 : JumpStart); (14.0729166666667 : 35.09375125 : JumpEnd); (10.3333333333333 : 35.09375125 : JumpStart); (10.1666666666667 : 35.09375125 : JumpEnd); (9.80208083333333 : 35.09375125 : JumpStart); (9.63541416666667 : 35.09375125 : JumpEnd); (9.53645458333333 : 35.09375125 : JumpStart); (9.36978791666666 : 35.09375125 : JumpEnd); (8.48958333333333 : 35.09375125 : JumpStart); (8.32291666666667 : 35.09375125 : JumpEnd); (7.25 : 35.09375125); (7.25 : 34.0967278829217)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_ForumAccess" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="70a42c08-3e81-447b-b88b-20ec528dd475" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 40); (5.59732443490112 : 39.9026755650989 : JumpStart); (5.71517556509888 : 39.7848244349011 : JumpEnd); (5.875 : 39.625); (6.718748 : 39.625); (6.718748 : 34.0967278829217)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Group/yaf_Group_yaf_ForumAccess" />
+      <nodes>
+        <classShapeMoniker Id="9702cd2a-5f1f-495e-bfa1-412444932158" />
+        <classShapeMoniker Id="70a42c08-3e81-447b-b88b-20ec528dd475" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 33.0639214715362); (2.2812525 : 41.389519922485); (2.46354541666667 : 41.389519922485 : JumpStart); (2.63021208333333 : 41.389519922485 : JumpEnd); (3.5 : 41.389519922485)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Group" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="9702cd2a-5f1f-495e-bfa1-412444932158" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.5 : 35.1876919319729); (29.25 : 35.1876919319729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Message/yaf_Message_yaf_Attachment" />
+      <nodes>
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+        <classShapeMoniker Id="a3d777f2-d626-4361-b1b3-cb770772082d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(26.5 : 35.15625); (21.8333333333333 : 35.15625 : JumpStart); (21.6666666666667 : 35.15625 : JumpEnd); (18.8333333333333 : 35.15625 : JumpStart); (18.6666666666667 : 35.15625 : JumpEnd); (17 : 35.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Message/yaf_Message_yaf_Forum" />
+      <nodes>
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(27.2092307692308 : 38.2134270221988); (27.2092307692308 : 38.4634270221988); (27.8046153846154 : 38.4634270221988); (27.8046153846154 : 38.2134270221988)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Message/yaf_Message_yaf_Message" />
+      <nodes>
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.5 : 37.4192135110994); (29.25 : 37.4192135110994)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Message/yaf_Message_yaf_MessageHistory" />
+      <nodes>
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+        <classShapeMoniker Id="30ccc8c3-af64-4351-8ae5-5106e22530c7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 36.5473263338705); (17.75 : 36.5473263338705)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_NntpForum" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="e72fa086-2822-4cf7-aa73-98284da60d65" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 34.6262295395633); (5.57291666666667 : 34.6262295395633 : JumpStart); (5.73958333333333 : 34.6262295395633 : JumpEnd); (6.63541466666667 : 34.6262295395633 : JumpStart); (6.80208133333333 : 34.6262295395633 : JumpEnd); (7.16666666666667 : 34.6262295395633 : JumpStart); (7.33333333333333 : 34.6262295395633 : JumpEnd); (8.32291666666667 : 34.6262295395633 : JumpStart); (8.48958333333333 : 34.6262295395633 : JumpEnd); (9.36978791666666 : 34.6262295395633 : JumpStart); (9.53645458333333 : 34.6262295395633 : JumpEnd); (10.1666666666667 : 34.6262295395633 : JumpStart); (10.3333333333333 : 34.6262295395633 : JumpEnd); (14.0729166666667 : 34.6262295395633 : JumpStart); (14.2395833333333 : 34.6262295395633 : JumpEnd); (14.7605885139222 : 34.6262295395633 : JumpStart); (15.0549464882812 : 34.6262295395633 : JumpEnd); (18.75 : 34.6262295395633); (18.75 : 35.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_NntpServer/yaf_NntpServer_yaf_NntpForum" />
+      <nodes>
+        <classShapeMoniker Id="dd0fd292-2520-40e2-a5b7-8f6558ef0812" />
+        <classShapeMoniker Id="e72fa086-2822-4cf7-aa73-98284da60d65" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 33.0639214715362); (1.2187475 : 34.7973263338705); (1.66666666666667 : 34.7973263338705 : JumpStart); (1.83333333333333 : 34.7973263338705 : JumpEnd); (1.93229291666667 : 34.7973263338705 : JumpStart); (2.09895958333333 : 34.7973263338705 : JumpEnd); (2.19791916666667 : 34.7973263338705 : JumpStart); (2.36458583333333 : 34.7973263338705 : JumpEnd); (2.46354541666667 : 34.7973263338705 : JumpStart); (2.63021208333333 : 34.7973263338705 : JumpEnd); (3.5 : 34.7973263338705)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_NntpServer" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="dd0fd292-2520-40e2-a5b7-8f6558ef0812" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 36.34375); (21.6666666666667 : 36.34375 : JumpStart); (21.8333333333333 : 36.34375 : JumpEnd); (24.5 : 36.34375); (24.5 : 37.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_NntpForum/yaf_NntpForum_yaf_NntpTopic" />
+      <nodes>
+        <classShapeMoniker Id="e72fa086-2822-4cf7-aa73-98284da60d65" />
+        <classShapeMoniker Id="cd4d4ccb-e51f-4bcc-a51f-5ce779520661" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 47.9991543243825); (9.25 : 47.9991543243825)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Poll/yaf_Poll_yaf_Choice" />
+      <nodes>
+        <classShapeMoniker Id="addddb87-94ef-4d8b-a533-be8e913d4146" />
+        <classShapeMoniker Id="9042f5e5-3103-49cf-b55d-1b645dffc97f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 36.5); (5.65625 : 31.10937625); (5.79166666666667 : 31.10937625 : JumpStart); (5.95833333333333 : 31.10937625 : JumpEnd); (6.5 : 31.10937625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_PollGroupCluster/yaf_PollGroupCluster_yaf_Category" />
+      <nodes>
+        <classShapeMoniker Id="ae55f0bf-248d-4139-9358-9795f140254e" />
+        <classShapeMoniker Id="d0de73bf-9afe-42c4-952a-f97d8e27e7ff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 37.7990746772289); (6.63541466666667 : 37.7990746772289 : JumpStart); (6.80208133333333 : 37.7990746772289 : JumpEnd); (9.36978791666666 : 37.7990746772289 : JumpStart); (9.53645458333333 : 37.7990746772289 : JumpEnd); (9.63541416666667 : 37.7990746772289 : JumpStart); (9.80208083333333 : 37.7990746772289 : JumpEnd); (10.1666666666667 : 37.7990746772289 : JumpStart); (10.3333333333333 : 37.7990746772289 : JumpEnd); (10.6979191666667 : 37.7990746772289 : JumpStart); (10.8645858333333 : 37.7990746772289 : JumpEnd); (11.6666666666667 : 37.7990746772289 : JumpStart); (11.8333333333333 : 37.7990746772289 : JumpEnd); (14.0729166666667 : 37.7990746772289 : JumpStart); (14.2395833333333 : 37.7990746772289 : JumpEnd); (15 : 37.7990746772289)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_PollGroupCluster/yaf_PollGroupCluster_yaf_Forum" />
+      <nodes>
+        <classShapeMoniker Id="ae55f0bf-248d-4139-9358-9795f140254e" />
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 37.8774590791265); (5.65625 : 46.7798855205874); (5.7617811460793 : 46.7798855205874 : JumpStart); (5.92844781274597 : 46.7798855205874 : JumpEnd); (6.5 : 46.7798855205874)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_PollGroupCluster/yaf_PollGroupCluster_yaf_Poll" />
+      <nodes>
+        <classShapeMoniker Id="ae55f0bf-248d-4139-9358-9795f140254e" />
+        <classShapeMoniker Id="addddb87-94ef-4d8b-a533-be8e913d4146" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 46.3290951376657); (9.25 : 46.3290951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Poll/yaf_Poll_yaf_PollVote" />
+      <nodes>
+        <classShapeMoniker Id="addddb87-94ef-4d8b-a533-be8e913d4146" />
+        <classShapeMoniker Id="874cc2bb-a545-4720-b942-b1dcc0964929" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 33.0639214715362); (2.54687875 : 48.6702511186898); (3.5 : 48.6702511186898)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Rank" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="69edce9f-a4b8-4441-9df0-5c27ba2afe53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.48437375 : 31.375); (1.48437375 : 22.8137295395633); (1.93229291666667 : 22.8137295395633 : JumpStart); (2.09895958333333 : 22.8137295395633 : JumpEnd); (3.5 : 22.8137295395633)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Registry" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="a5a8b837-7272-4f46-a5bd-167b8961e69e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 32.2194607357681); (3.5 : 32.2194607357681)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_Smiley" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="c836200e-b387-464c-bd3e-90a3e7884467" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.75 : 40.15625); (26.5 : 40.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_WatchTopic" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="42d71eaa-7d16-4dde-847e-f65f0e08bfd4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21.75 : 37.125); (21.75 : 28.9905323837274); (14.8958333333333 : 28.9905323837274 : JumpStart); (14.7291666666667 : 28.9905323837274 : JumpEnd); (14.7083333333333 : 28.9905323837274 : JumpStart); (14.5416666666667 : 28.9905323837274 : JumpEnd); (10.3333333333333 : 28.9905323837274 : JumpStart); (10.1666666666667 : 28.9905323837274 : JumpEnd); (9.53645458333333 : 28.9905323837274 : JumpStart); (9.36978791666666 : 28.9905323837274 : JumpEnd); (8.5 : 28.9905323837274)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_Active" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="ceae9f6e-d6c6-4244-9f0a-62ebdc8b1f9e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.75 : 40.9499447073042); (23.5 : 40.9499447073042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_FavoriteTopic" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="d12fd1b2-cef9-4cac-bcdb-eca7e44360be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.75 : 37.9223263338705); (17 : 37.9223263338705)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_Forum" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.75 : 37.40625); (24.4166666666667 : 37.40625 : JumpStart); (24.5833333333333 : 37.40625 : JumpEnd); (26.5 : 37.40625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_Message" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.75 : 38.4387295395633); (23.5 : 38.4387295395633)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_NntpTopic" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="cd4d4ccb-e51f-4bcc-a51f-5ce779520661" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 38.1799131669353); (20.75 : 38.1799131669353)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_Topic" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(26.5 : 37.609375); (24.5833333333333 : 37.609375 : JumpStart); (24.4166666666667 : 37.609375 : JumpEnd); (22.75 : 37.609375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Message/yaf_Message_yaf_Topic" />
+      <nodes>
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 37.1182853386145); (6.63541466666667 : 37.1182853386145 : JumpStart); (6.80208133333333 : 37.1182853386145 : JumpEnd); (9.36978791666666 : 37.1182853386145 : JumpStart); (9.53645458333333 : 37.1182853386145 : JumpEnd); (9.63541416666667 : 37.1182853386145 : JumpStart); (9.80208083333333 : 37.1182853386145 : JumpEnd); (10.1666666666667 : 37.1182853386145 : JumpStart); (10.3333333333333 : 37.1182853386145 : JumpEnd); (10.6979191666667 : 37.1182853386145 : JumpStart); (10.8645858333333 : 37.1182853386145 : JumpEnd); (11.75 : 37.1182853386145); (11.75 : 38.0331902753313); (14.0729166666667 : 38.0331902753313 : JumpStart); (14.2395833333333 : 38.0331902753313 : JumpEnd); (14.75 : 38.0331902753313); (14.75 : 39.7420830032229); (17.5 : 39.7420830032229); (17.5 : 41.3998894146085); (18.6666666666667 : 41.3998894146085 : JumpStart); (18.8333333333333 : 41.3998894146085 : JumpEnd); (20.9900295512821 : 41.3998894146085 : JumpStart); (21.1566962179487 : 41.3998894146085 : JumpEnd); (21.3758974358974 : 41.3998894146085 : JumpStart); (21.5425641025641 : 41.3998894146085 : JumpEnd); (21.75 : 41.3998894146085); (21.75 : 41.1498894146085)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_PollGroupCluster/yaf_PollGroupCluster_yaf_Topic" />
+      <nodes>
+        <classShapeMoniker Id="ae55f0bf-248d-4139-9358-9795f140254e" />
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21.4592307692308 : 41.1498894146085); (21.4592307692308 : 41.6498894146085); (22.0546153846154 : 41.6498894146085); (22.0546153846154 : 41.1498894146085)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Topic/yaf_Topic_yaf_Topic" />
+      <nodes>
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 43.2286006883283); (12 : 43.2286006883283)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_FF_Article" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="63d8e835-7e54-403d-92f3-f045a278da0c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 42.4540951376657); (20.9900295512821 : 42.4540951376657 : JumpStart); (21.1566962179487 : 42.4540951376657 : JumpEnd); (27.5 : 42.4540951376657); (27.5 : 41.1581902753313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_WatchTopic" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="42d71eaa-7d16-4dde-847e-f65f0e08bfd4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 40.546875); (15 : 40.546875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_FF_UserComment" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="3d31275a-4dea-451b-af8a-a1739ad32d04" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 38); (10.25 : 27.5385074612425); (9.53645458333333 : 27.5385074612425 : JumpStart); (9.36978791666666 : 27.5385074612425 : JumpEnd); (8.5 : 27.5385074612425)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Active" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="ceae9f6e-d6c6-4244-9f0a-62ebdc8b1f9e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.7812525 : 38); (10.7812525 : 36.6216426693072); (12 : 36.6216426693072)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Buddy" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="630a9a7e-8cdc-4a0e-9417-a840370ad539" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 39.1415951376657); (12 : 39.1415951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_CheckEmail" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="c999b143-e051-44bf-82d4-c0f2b069cd78" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 43.4852772997336); (11.8125 : 44.0477772997336); (11.8125 : 46.2194607357681); (12 : 46.2194607357681)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_EventLog" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="b8663a19-64e1-4a22-8ee8-55ea75d5e9ea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 42.3061402064985); (20.9900295512821 : 42.3061402064985 : JumpStart); (21.1566962179487 : 42.3061402064985 : JumpEnd); (24.5 : 42.3061402064985); (24.5 : 41.9717278829217)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_FavoriteTopic" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="d12fd1b2-cef9-4cac-bcdb-eca7e44360be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 38.2353451376657); (14.0729166666667 : 38.2353451376657 : JumpStart); (14.2395833333333 : 38.2353451376657 : JumpEnd); (14.6666666666667 : 38.2353451376657 : JumpStart); (14.8333333333333 : 38.2353451376657 : JumpEnd); (15 : 38.2353451376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Forum" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.7187475 : 38); (9.7187475 : 34.6568647697816); (10.1666666666667 : 34.6568647697816 : JumpStart); (10.3333333333333 : 34.6568647697816 : JumpEnd); (14.0729166666667 : 34.6568647697816 : JumpStart); (14.2395833333333 : 34.6568647697816 : JumpEnd); (14.7912237441406 : 34.6568647697816 : JumpStart); (15.0855817184996 : 34.6568647697816 : JumpEnd); (21.6666666666667 : 34.6568647697816 : JumpStart); (21.8333333333333 : 34.6568647697816 : JumpEnd); (26.5 : 34.6568647697816)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Message" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="51bf78ae-3c66-4465-99bc-28c8714a3887" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.2176923076923 : 43.5822013766567); (11.625 : 43.9895090689644); (11.625 : 48.5944607357681); (12 : 48.5944607357681)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_PMessage" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="f5a7da94-d479-4376-82c4-9553d7535ef0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 41.3915951376657); (12 : 41.3915951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Thank" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="6e4ececf-dd57-4855-a3b4-6e2d67b9de69" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 40.0790951376657); (14.0729166666667 : 40.0790951376657 : JumpStart); (14.2395833333333 : 40.0790951376657 : JumpEnd); (17.4166666666667 : 40.0790951376657 : JumpStart); (17.5833333333333 : 40.0790951376657 : JumpEnd); (18.6666666666667 : 40.0790951376657 : JumpStart); (18.8333333333333 : 40.0790951376657 : JumpEnd); (20.75 : 40.0790951376657)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Topic" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 42.6020500688328); (21.0733628846154 : 42.6020500688328); (21.0733628846154 : 41.1498894146085)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_Topic1" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="8b621555-0a3d-4190-afec-38fb39bc3be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.01562625 : 33.0639214715362); (2.01562625 : 38.8125); (2.19791916666667 : 38.8125 : JumpStart); (2.36458583333333 : 38.8125 : JumpEnd); (2.46354541666667 : 38.8125 : JumpStart); (2.63021208333333 : 38.8125 : JumpEnd); (5.57291666666667 : 38.8125 : JumpStart); (5.73958333333333 : 38.8125 : JumpEnd); (6.63541466666667 : 38.8125 : JumpStart); (6.80208133333333 : 38.8125 : JumpEnd); (9.25 : 38.8125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Board/yaf_Board_yaf_User" />
+      <nodes>
+        <classShapeMoniker Id="b4aa4a34-ab34-49dd-9940-d98531148ebf" />
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 47.125); (6.125 : 46.5); (6.125 : 43.9572013766567); (8.875 : 43.9572013766567); (9.25 : 43.5822013766567)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Rank/yaf_Rank_yaf_User" />
+      <nodes>
+        <classShapeMoniker Id="69edce9f-a4b8-4441-9df0-5c27ba2afe53" />
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.89159513766567); (3.5 : 1.89159513766567)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_UserAlbum/yaf_UserAlbum_yaf_UserAlbumImage" />
+      <nodes>
+        <classShapeMoniker Id="33b96d61-b663-4749-a1be-df62fc26489d" />
+        <classShapeMoniker Id="e804a130-d924-4446-bee6-355eb76e822e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 24.9847524490982); (6.25 : 24.9847524490982)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_AccessMask/yaf_AccessMask_yaf_UserForum" />
+      <nodes>
+        <classShapeMoniker Id="fc78b40c-414f-4489-9dde-7ee65acd6819" />
+        <classShapeMoniker Id="19ef5e2b-0f06-48aa-9adc-978e07cb261b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.0953836153846 : 34.75); (14.8125 : 34.4671163846154); (14.8125 : 25.0165951376657); (8.25 : 25.0165951376657)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_UserForum" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="19ef5e2b-0f06-48aa-9adc-978e07cb261b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.45312125 : 38); (9.45312125 : 25.4311452064985); (8.25 : 25.4311452064985)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_UserForum" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="19ef5e2b-0f06-48aa-9adc-978e07cb261b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 41.2829983433584); (5.57291666666667 : 41.2829983433584 : JumpStart); (5.73958333333333 : 41.2829983433584 : JumpEnd); (6.25 : 41.2829983433584)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Group/yaf_Group_yaf_UserGroup" />
+      <nodes>
+        <classShapeMoniker Id="9702cd2a-5f1f-495e-bfa1-412444932158" />
+        <classShapeMoniker Id="55b02202-86ae-41c0-9d30-c7c638aac8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 41.2829983433584); (8.25 : 41.2829983433584)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_UserGroup" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="55b02202-86ae-41c0-9d30-c7c638aac8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 48.5944607357681); (15.75 : 48.5944607357681); (15.75 : 44.7503838639458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_PMessage/yaf_PMessage_yaf_UserPMessage" />
+      <nodes>
+        <classShapeMoniker Id="f5a7da94-d479-4376-82c4-9553d7535ef0" />
+        <classShapeMoniker Id="fe67ebc9-1305-4d68-b44d-ae1dd2122a81" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 42.78125); (14.75 : 42.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_UserPMessage" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="fe67ebc9-1305-4d68-b44d-ae1dd2122a81" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 38.8085415016115); (17.75 : 38.8085415016115)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_Forum/yaf_Forum_yaf_WatchForum" />
+      <nodes>
+        <classShapeMoniker Id="5ad90320-a50a-4751-83ae-ea46c9f0ba3e" />
+        <classShapeMoniker Id="8d475910-7c93-4a0c-86ca-be6a635214bc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 42.2748877064985); (18.75 : 42.2748877064985); (18.75 : 39.9081902753313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FFLinqClassDataContext/yaf_User/yaf_User_yaf_WatchForum" />
+      <nodes>
+        <classShapeMoniker Id="3853a390-25b2-42dd-ba73-ade1be46959b" />
+        <classShapeMoniker Id="8d475910-7c93-4a0c-86ca-be6a635214bc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

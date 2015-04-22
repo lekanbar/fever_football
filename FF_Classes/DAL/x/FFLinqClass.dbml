@@ -1,0 +1,1121 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ForumDB" Class="FFLinqClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=banxman-pc\;Initial Catalog=ForumDB;Integrated Security=True" SettingsObjectName="FF_Classes.Properties.Settings" SettingsPropertyName="FeverFootballDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FF_Article" Member="FF_Articles">
+    <Type Name="FF_Article">
+      <Column Name="ArticleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Paragraph2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageURL2" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Paragraph3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageURL3" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Paragraph4" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageURL4" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="yaf_User_FF_Article" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_WatchTopic" Member="yaf_WatchTopics">
+    <Type Name="yaf_WatchTopic">
+      <Column Name="WatchTopicID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TopicID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastMail" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="yaf_Topic_yaf_WatchTopic" Member="yaf_Topic" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_WatchTopic" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Assists" Member="FF_Assists">
+    <Type Name="FF_Assist">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlayerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MatchID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GoalID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Match_FF_Assist" Member="FF_Match" ThisKey="MatchID" OtherKey="ID" Type="FF_Match" IsForeignKey="true" />
+      <Association Name="FF_TeamPlayer_FF_Assist" Member="FF_TeamPlayer" ThisKey="PlayerID" OtherKey="ID" Type="FF_TeamPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionGoalScorers" Member="FF_ChampionGoalScorers">
+    <Type Name="FF_ChampionGoalScorer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MatchID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlayerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Minute" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsGroupStage_FF_ChampionGoalScorer" Member="FF_ChampionsGroupStage" ThisKey="MatchID" OtherKey="ID" Type="FF_ChampionsGroupStage" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionGoalScorer" Member="FF_Team" ThisKey="TeamID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsGroupStages" Member="FF_ChampionsGroupStages">
+    <Type Name="FF_ChampionsGroupStage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team2PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team1Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Team2PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Team1Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team2Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsGroupStage_FF_ChampionGoalScorer" Member="FF_ChampionGoalScorers" ThisKey="ID" OtherKey="MatchID" Type="FF_ChampionGoalScorer" />
+      <Association Name="FF_Season_FF_ChampionsGroupStage" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage" Member="FF_Team" ThisKey="Team1ID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage1" Member="FF_Team1" ThisKey="Team2ID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables">
+    <Type Name="FF_ChampionsLeagueTable">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="P" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="W" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="L" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="F" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Diff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsLegaueGroup_FF_ChampionsLeagueTable" Member="FF_ChampionsLegaueGroup" ThisKey="GroupID" OtherKey="ID" Type="FF_ChampionsLegaueGroup" IsForeignKey="true" />
+      <Association Name="FF_Season_FF_ChampionsLeagueTable" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsLeagueTable" Member="FF_Team" ThisKey="TeamID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsLegaueGroups" Member="FF_ChampionsLegaueGroups">
+    <Type Name="FF_ChampionsLegaueGroup">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_ChampionsLegaueGroup_FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables" ThisKey="ID" OtherKey="GroupID" Type="FF_ChampionsLeagueTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_ChampionsOtherStages" Member="FF_ChampionsOtherStages">
+    <Type Name="FF_ChampionsOtherStage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team2PlayerImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Team1Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Team2PlayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Team1Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team2Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Aggregate1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Aggregate2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Leg" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Season_FF_ChampionsOtherStage" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage" Member="FF_Team" ThisKey="Team1ID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage1" Member="FF_Team1" ThisKey="Team2ID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Comments" Member="FF_Comments">
+    <Type Name="FF_Comment">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OwnerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Comment_FF_UserComment" Member="FF_UserComments" ThisKey="ID" OtherKey="CommentID" Type="FF_UserComment" />
+      <Association Name="FF_Comment_FF_UserComment2" Member="FF_UserComment2s" ThisKey="ID" OtherKey="CommentID" Type="FF_UserComment2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_CommentSubscriptions" Member="FF_CommentSubscriptions">
+    <Type Name="FF_CommentSubscription">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserCommentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_GoalScorers" Member="FF_GoalScorers">
+    <Type Name="FF_GoalScorer">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlayerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MatchID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Minute" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Match_FF_GoalScorer" Member="FF_Match" ThisKey="MatchID" OtherKey="ID" Type="FF_Match" IsForeignKey="true" />
+      <Association Name="FF_TeamPlayer_FF_GoalScorer" Member="FF_TeamPlayer" ThisKey="PlayerID" OtherKey="ID" Type="FF_TeamPlayer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Leagues" Member="FF_Leagues">
+    <Type Name="FF_League">
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LogoURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="FF_League_FF_LeagueTable" Member="FF_LeagueTables" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_LeagueTable" />
+      <Association Name="FF_League_FF_Match" Member="FF_Matches" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_Match" />
+      <Association Name="FF_League_FF_New" Member="FF_News" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_New" />
+      <Association Name="FF_League_FF_Team" Member="FF_Teams" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_Team" />
+      <Association Name="FF_League_FF_TopScorer" Member="FF_TopScorers" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_TopScorer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_LeagueTables" Member="FF_LeagueTables">
+    <Type Name="FF_LeagueTable">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="P" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="W" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="D" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="L" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="F" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Diff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FF_League_FF_LeagueTable" Member="FF_League" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_League" IsForeignKey="true" />
+      <Association Name="FF_Season_FF_LeagueTable" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_LeagueTable" Member="FF_Team" ThisKey="TeamID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Matches" Member="FF_Matches">
+    <Type Name="FF_Match">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Team1Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1PlayerID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Team2PlayerID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Team1Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HasBeenPlayed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Match_FF_Assist" Member="FF_Assists" ThisKey="ID" OtherKey="MatchID" Type="FF_Assist" />
+      <Association Name="FF_Match_FF_GoalScorer" Member="FF_GoalScorers" ThisKey="ID" OtherKey="MatchID" Type="FF_GoalScorer" />
+      <Association Name="FF_League_FF_Match" Member="FF_League" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_League" IsForeignKey="true" />
+      <Association Name="FF_Season_FF_Match" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+      <Association Name="FF_TeamPlayer_FF_Match" Member="FF_TeamPlayer" ThisKey="Team1PlayerID" OtherKey="ID" Type="FF_TeamPlayer" IsForeignKey="true" />
+      <Association Name="FF_TeamPlayer_FF_Match1" Member="FF_TeamPlayer1" ThisKey="Team2PlayerID" OtherKey="ID" Type="FF_TeamPlayer" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_Match" Member="FF_Team" ThisKey="Team1ID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_Match1" Member="FF_Team1" ThisKey="Team2ID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_News" Member="FF_News">
+    <Type Name="FF_New">
+      <Column Name="NewsID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="FF_League_FF_New" Member="FF_League" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_League" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="FF_Season_FF_New" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Player" Member="FF_Players">
+    <Type Name="FF_Player">
+      <Column Name="PlayerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Player_FF_TeamPlayer" Member="FF_TeamPlayers" ThisKey="PlayerID" OtherKey="PlayerID" Type="FF_TeamPlayer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_PlayerStatus" Member="FF_PlayerStatus">
+    <Type Name="FF_PlayerStatus">
+      <Column Name="StatusID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Polls" Member="FF_Polls">
+    <Type Name="FF_Poll">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Option2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Option3" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Poll_FF_Vote" Member="FF_Votes" ThisKey="ID" OtherKey="QuestionID" Type="FF_Vote" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Season" Member="FF_Seasons">
+    <Type Name="FF_Season">
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsCurrent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Season_FF_ChampionsGroupStage" Member="FF_ChampionsGroupStages" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_ChampionsGroupStage" />
+      <Association Name="FF_Season_FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_ChampionsLeagueTable" />
+      <Association Name="FF_Season_FF_ChampionsOtherStage" Member="FF_ChampionsOtherStages" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_ChampionsOtherStage" />
+      <Association Name="FF_Season_FF_LeagueTable" Member="FF_LeagueTables" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_LeagueTable" />
+      <Association Name="FF_Season_FF_Match" Member="FF_Matches" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Match" />
+      <Association Name="FF_Season_FF_New" Member="FF_News" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_New" />
+      <Association Name="FF_Season_FF_TopScorer" Member="FF_TopScorers" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_TopScorer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_TeamPlayers" Member="FF_TeamPlayers">
+    <Type Name="FF_TeamPlayer">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlayerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_TeamPlayer_FF_Assist" Member="FF_Assists" ThisKey="ID" OtherKey="PlayerID" Type="FF_Assist" />
+      <Association Name="FF_TeamPlayer_FF_GoalScorer" Member="FF_GoalScorers" ThisKey="ID" OtherKey="PlayerID" Type="FF_GoalScorer" />
+      <Association Name="FF_TeamPlayer_FF_Match" Member="FF_Matches" ThisKey="ID" OtherKey="Team1PlayerID" Type="FF_Match" />
+      <Association Name="FF_TeamPlayer_FF_Match1" Member="FF_Matches1" ThisKey="ID" OtherKey="Team2PlayerID" Type="FF_Match" />
+      <Association Name="FF_Player_FF_TeamPlayer" Member="FF_Player" ThisKey="PlayerID" OtherKey="PlayerID" Type="FF_Player" IsForeignKey="true" />
+      <Association Name="FF_Team_FF_TeamPlayer" Member="FF_Team" ThisKey="TeamID" OtherKey="TeamID" Type="FF_Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Teams" Member="FF_Teams">
+    <Type Name="FF_Team">
+      <Column Name="TeamID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LogoURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="FF_Team_FF_ChampionGoalScorer" Member="FF_ChampionGoalScorers" ThisKey="TeamID" OtherKey="TeamID" Type="FF_ChampionGoalScorer" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage" Member="FF_ChampionsGroupStages" ThisKey="TeamID" OtherKey="Team1ID" Type="FF_ChampionsGroupStage" />
+      <Association Name="FF_Team_FF_ChampionsGroupStage1" Member="FF_ChampionsGroupStages1" ThisKey="TeamID" OtherKey="Team2ID" Type="FF_ChampionsGroupStage" />
+      <Association Name="FF_Team_FF_ChampionsLeagueTable" Member="FF_ChampionsLeagueTables" ThisKey="TeamID" OtherKey="TeamID" Type="FF_ChampionsLeagueTable" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage" Member="FF_ChampionsOtherStages" ThisKey="TeamID" OtherKey="Team1ID" Type="FF_ChampionsOtherStage" />
+      <Association Name="FF_Team_FF_ChampionsOtherStage1" Member="FF_ChampionsOtherStages1" ThisKey="TeamID" OtherKey="Team2ID" Type="FF_ChampionsOtherStage" />
+      <Association Name="FF_Team_FF_LeagueTable" Member="FF_LeagueTables" ThisKey="TeamID" OtherKey="TeamID" Type="FF_LeagueTable" />
+      <Association Name="FF_Team_FF_Match" Member="FF_Matches" ThisKey="TeamID" OtherKey="Team1ID" Type="FF_Match" />
+      <Association Name="FF_Team_FF_Match1" Member="FF_Matches1" ThisKey="TeamID" OtherKey="Team2ID" Type="FF_Match" />
+      <Association Name="FF_Team_FF_TeamPlayer" Member="FF_TeamPlayers" ThisKey="TeamID" OtherKey="TeamID" Type="FF_TeamPlayer" />
+      <Association Name="FF_League_FF_Team" Member="FF_League" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_League" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_TopScorers" Member="FF_TopScorers">
+    <Type Name="FF_TopScorer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Goals" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SeasonID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsCurrent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Week" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FF_League_FF_TopScorer" Member="FF_League" ThisKey="LeagueID" OtherKey="LeagueID" Type="FF_League" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="FF_Season_FF_TopScorer" Member="FF_Season" ThisKey="SeasonID" OtherKey="SeasonID" Type="FF_Season" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_UserComment" Member="FF_UserComments">
+    <Type Name="FF_UserComment">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CommentID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Comment_FF_UserComment" Member="FF_Comment" ThisKey="CommentID" OtherKey="ID" Type="FF_Comment" IsForeignKey="true" />
+      <Association Name="yaf_User_FF_UserComment" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_UserComment2" Member="FF_UserComment2s">
+    <Type Name="FF_UserComment2">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CommentID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Comment_FF_UserComment2" Member="FF_Comment" ThisKey="CommentID" OtherKey="ID" Type="FF_Comment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FF_Votes" Member="FF_Votes">
+    <Type Name="FF_Vote">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionID" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Option]" Member="Option" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Votes" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="FF_Poll_FF_Vote" Member="FF_Poll" ThisKey="QuestionID" OtherKey="ID" Type="FF_Poll" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_AccessMask" Member="yaf_AccessMasks">
+    <Type Name="yaf_AccessMask">
+      <Column Name="AccessMaskID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_AccessMask_yaf_ForumAccess" Member="yaf_ForumAccesses" ThisKey="AccessMaskID" OtherKey="AccessMaskID" Type="yaf_ForumAccess" />
+      <Association Name="yaf_AccessMask_yaf_UserForum" Member="yaf_UserForums" ThisKey="AccessMaskID" OtherKey="AccessMaskID" Type="yaf_UserForum" />
+      <Association Name="yaf_Board_yaf_AccessMask" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Active" Member="yaf_Actives">
+    <Type Name="yaf_Active">
+      <Column Name="SessionID" Type="System.String" DbType="NVarChar(24) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(39) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastActive" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TopicID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Browser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Platform" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForumPage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="yaf_Board_yaf_Active" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+      <Association Name="yaf_Forum_yaf_Active" Member="yaf_Forum" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" />
+      <Association Name="yaf_Topic_yaf_Active" Member="yaf_Topic" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_Active" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_ActiveAccess" Member="yaf_ActiveAccesses">
+    <Type Name="yaf_ActiveAccess">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsForumModerator" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsModerator" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReadAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PostAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PriorityAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PollAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VoteAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ModeratorAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EditAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UploadAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DownloadAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Attachment" Member="yaf_Attachments">
+    <Type Name="yaf_Attachment">
+      <Column Name="AttachmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Bytes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContentType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Downloads" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileData" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="yaf_Message_yaf_Attachment" Member="yaf_Message" ThisKey="MessageID" OtherKey="MessageID" Type="yaf_Message" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_BannedIP" Member="yaf_BannedIPs">
+    <Type Name="yaf_BannedIP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Mask" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Since" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="yaf_Board_yaf_BannedIP" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_BBCode" Member="yaf_BBCodes">
+    <Type Name="yaf_BBCode">
+      <Column Name="BBCodeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="OnClickJS" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DisplayJS" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EditJS" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DisplayCSS" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SearchRegex" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ReplaceRegex" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Variables" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="UseModule" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModuleClass" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ExecOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Board_yaf_BBCode" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Board" Member="yaf_Boards">
+    <Type Name="yaf_Board">
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AllowThreaded" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MembershipAppName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RolesAppName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BoardUID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="yaf_Board_yaf_AccessMask" Member="yaf_AccessMasks" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_AccessMask" />
+      <Association Name="yaf_Board_yaf_Active" Member="yaf_Actives" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Active" />
+      <Association Name="yaf_Board_yaf_BannedIP" Member="yaf_BannedIPs" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_BannedIP" />
+      <Association Name="yaf_Board_yaf_BBCode" Member="yaf_BBCodes" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_BBCode" />
+      <Association Name="yaf_Board_yaf_Category" Member="yaf_Categories" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Category" />
+      <Association Name="yaf_Board_yaf_Extension" Member="yaf_Extensions" ThisKey="BoardID" OtherKey="BoardId" Type="yaf_Extension" />
+      <Association Name="yaf_Board_yaf_Group" Member="yaf_Groups" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Group" />
+      <Association Name="yaf_Board_yaf_NntpServer" Member="yaf_NntpServers" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_NntpServer" />
+      <Association Name="yaf_Board_yaf_Rank" Member="yaf_Ranks" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Rank" />
+      <Association Name="yaf_Board_yaf_Registry" Member="yaf_Registries" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Registry" />
+      <Association Name="yaf_Board_yaf_Smiley" Member="yaf_Smileys" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Smiley" />
+      <Association Name="yaf_Board_yaf_User" Member="yaf_Users" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Buddy" Member="yaf_Buddies">
+    <Type Name="yaf_Buddy">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ToUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Requested" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_User_yaf_Buddy" Member="yaf_User" ThisKey="FromUserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Category" Member="yaf_Categories">
+    <Type Name="yaf_Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PollGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="yaf_Category_yaf_Forum" Member="yaf_Forums" ThisKey="CategoryID" OtherKey="CategoryID" Type="yaf_Forum" />
+      <Association Name="yaf_Board_yaf_Category" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+      <Association Name="yaf_PollGroupCluster_yaf_Category" Member="yaf_PollGroupCluster" ThisKey="PollGroupID" OtherKey="PollGroupID" Type="yaf_PollGroupCluster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_CheckEmail" Member="yaf_CheckEmails">
+    <Type Name="yaf_CheckEmail">
+      <Column Name="CheckEmailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Hash" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_User_yaf_CheckEmail" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Choice" Member="yaf_Choices">
+    <Type Name="yaf_Choice">
+      <Column Name="ChoiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PollID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Choice" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Votes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectPath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MimeType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="yaf_Poll_yaf_Choice" Member="yaf_Poll" ThisKey="PollID" OtherKey="PollID" Type="yaf_Poll" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_EventLog" Member="yaf_EventLogs">
+    <Type Name="yaf_EventLog">
+      <Column Name="EventLogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_User_yaf_EventLog" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Extension" Member="yaf_Extensions">
+    <Type Name="yaf_Extension">
+      <Column Name="ExtensionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Extension" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Board_yaf_Extension" Member="yaf_Board" ThisKey="BoardId" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_FavoriteTopic" Member="yaf_FavoriteTopics">
+    <Type Name="yaf_FavoriteTopic">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TopicID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Topic_yaf_FavoriteTopic" Member="yaf_Topic" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_FavoriteTopic" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Forum" Member="yaf_Forums">
+    <Type Name="yaf_Forum">
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastPosted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastTopicID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastMessageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NumTopics" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumPosts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RemoteURL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsLocked" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsNoCount" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsModerated" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ThemeURL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PollGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Styles" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="yaf_Forum_yaf_Active" Member="yaf_Actives" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Active" />
+      <Association Name="yaf_Forum_yaf_Forum" Member="yaf_Forums" ThisKey="ForumID" OtherKey="ParentID" Type="yaf_Forum" />
+      <Association Name="yaf_Forum_yaf_ForumAccess" Member="yaf_ForumAccesses" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_ForumAccess" />
+      <Association Name="yaf_Forum_yaf_NntpForum" Member="yaf_NntpForums" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_NntpForum" />
+      <Association Name="yaf_Forum_yaf_Topic" Member="yaf_Topics" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Topic" />
+      <Association Name="yaf_Forum_yaf_UserForum" Member="yaf_UserForums" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_UserForum" />
+      <Association Name="yaf_Forum_yaf_WatchForum" Member="yaf_WatchForums" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_WatchForum" />
+      <Association Name="yaf_Category_yaf_Forum" Member="yaf_Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="yaf_Category" IsForeignKey="true" />
+      <Association Name="yaf_Forum_yaf_Forum" Member="yaf_Forum1" ThisKey="ParentID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" />
+      <Association Name="yaf_Message_yaf_Forum" Member="yaf_Message" ThisKey="LastMessageID" OtherKey="MessageID" Type="yaf_Message" IsForeignKey="true" />
+      <Association Name="yaf_PollGroupCluster_yaf_Forum" Member="yaf_PollGroupCluster" ThisKey="PollGroupID" OtherKey="PollGroupID" Type="yaf_PollGroupCluster" IsForeignKey="true" />
+      <Association Name="yaf_Topic_yaf_Forum" Member="yaf_Topic" ThisKey="LastTopicID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_Forum" Member="yaf_User" ThisKey="LastUserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_ForumAccess" Member="yaf_ForumAccesses">
+    <Type Name="yaf_ForumAccess">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccessMaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_AccessMask_yaf_ForumAccess" Member="yaf_AccessMask" ThisKey="AccessMaskID" OtherKey="AccessMaskID" Type="yaf_AccessMask" IsForeignKey="true" />
+      <Association Name="yaf_Forum_yaf_ForumAccess" Member="yaf_Forum" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" />
+      <Association Name="yaf_Group_yaf_ForumAccess" Member="yaf_Group" ThisKey="GroupID" OtherKey="GroupID" Type="yaf_Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Group" Member="yaf_Groups">
+    <Type Name="yaf_Group">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PMLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Style" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="UsrSigChars" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrSigBBCodes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UsrSigHTMLTags" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UsrAlbums" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAlbumImages" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Group_yaf_ForumAccess" Member="yaf_ForumAccesses" ThisKey="GroupID" OtherKey="GroupID" Type="yaf_ForumAccess" />
+      <Association Name="yaf_Group_yaf_UserGroup" Member="yaf_UserGroups" ThisKey="GroupID" OtherKey="GroupID" Type="yaf_UserGroup" />
+      <Association Name="yaf_Board_yaf_Group" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_GroupMedal" Member="yaf_GroupMedals">
+    <Type Name="yaf_GroupMedal">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Hide" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OnlyRibbon" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_IgnoreUser" Member="yaf_IgnoreUsers">
+    <Type Name="yaf_IgnoreUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IgnoredUserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Mail" Member="yaf_Mails">
+    <Type Name="yaf_Mail">
+      <Column Name="MailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromUser" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="FromUserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ToUserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BodyHtml" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SendTries" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SendAttempt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProcessID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Medal" Member="yaf_Medals">
+    <Type Name="yaf_Medal">
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedalID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedalURL" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="RibbonURL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SmallMedalURL" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="SmallRibbonURL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SmallMedalWidth" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SmallMedalHeight" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SmallRibbonWidth" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SmallRibbonHeight" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Message" Member="yaf_Messages">
+    <Type Name="yaf_Message">
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TopicID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyTo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Position" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Indent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Posted" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(39) NOT NULL" CanBeNull="false" />
+      <Column Name="Edited" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EditReason" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsModeratorChanged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteReason" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BlogPostID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EditedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="yaf_Message_yaf_Attachment" Member="yaf_Attachments" ThisKey="MessageID" OtherKey="MessageID" Type="yaf_Attachment" />
+      <Association Name="yaf_Message_yaf_Forum" Member="yaf_Forums" ThisKey="MessageID" OtherKey="LastMessageID" Type="yaf_Forum" />
+      <Association Name="yaf_Message_yaf_Message" Member="yaf_Messages" ThisKey="MessageID" OtherKey="ReplyTo" Type="yaf_Message" />
+      <Association Name="yaf_Message_yaf_MessageHistory" Member="yaf_MessageHistories" ThisKey="MessageID" OtherKey="MessageID" Type="yaf_MessageHistory" />
+      <Association Name="yaf_Message_yaf_Topic" Member="yaf_Topics" ThisKey="MessageID" OtherKey="LastMessageID" Type="yaf_Topic" />
+      <Association Name="yaf_Message_yaf_Message" Member="yaf_Message1" ThisKey="ReplyTo" OtherKey="MessageID" Type="yaf_Message" IsForeignKey="true" />
+      <Association Name="yaf_Topic_yaf_Message" Member="yaf_Topic" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_Message" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_MessageHistory" Member="yaf_MessageHistories">
+    <Type Name="yaf_MessageHistory">
+      <Column Name="MessageHistoryID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(39) NOT NULL" CanBeNull="false" />
+      <Column Name="Edited" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditReason" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsModeratorChanged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Message_yaf_MessageHistory" Member="yaf_Message" ThisKey="MessageID" OtherKey="MessageID" Type="yaf_Message" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_MessageReported" Member="yaf_MessageReporteds">
+    <Type Name="yaf_MessageReported">
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Resolved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ResolvedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResolvedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_MessageReportedAudit" Member="yaf_MessageReportedAudits">
+    <Type Name="yaf_MessageReportedAudit">
+      <Column Name="LogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Reported" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReportedNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportText" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_NntpForum" Member="yaf_NntpForums">
+    <Type Name="yaf_NntpForum">
+      <Column Name="NntpForumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NntpServerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastMessageNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_NntpForum_yaf_NntpTopic" Member="yaf_NntpTopics" ThisKey="NntpForumID" OtherKey="NntpForumID" Type="yaf_NntpTopic" />
+      <Association Name="yaf_Forum_yaf_NntpForum" Member="yaf_Forum" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" />
+      <Association Name="yaf_NntpServer_yaf_NntpForum" Member="yaf_NntpServer" ThisKey="NntpServerID" OtherKey="NntpServerID" Type="yaf_NntpServer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_NntpServer" Member="yaf_NntpServers">
+    <Type Name="yaf_NntpServer">
+      <Column Name="NntpServerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Port" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserPass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="yaf_NntpServer_yaf_NntpForum" Member="yaf_NntpForums" ThisKey="NntpServerID" OtherKey="NntpServerID" Type="yaf_NntpForum" />
+      <Association Name="yaf_Board_yaf_NntpServer" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_NntpTopic" Member="yaf_NntpTopics">
+    <Type Name="yaf_NntpTopic">
+      <Column Name="NntpTopicID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NntpForumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Thread" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="TopicID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_NntpForum_yaf_NntpTopic" Member="yaf_NntpForum" ThisKey="NntpForumID" OtherKey="NntpForumID" Type="yaf_NntpForum" IsForeignKey="true" />
+      <Association Name="yaf_Topic_yaf_NntpTopic" Member="yaf_Topic" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_PMessage" Member="yaf_PMessages">
+    <Type Name="yaf_PMessage">
+      <Column Name="PMessageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_PMessage_yaf_UserPMessage" Member="yaf_UserPMessages" ThisKey="PMessageID" OtherKey="PMessageID" Type="yaf_UserPMessage" />
+      <Association Name="yaf_User_yaf_PMessage" Member="yaf_User" ThisKey="FromUserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Poll" Member="yaf_Polls">
+    <Type Name="yaf_Poll">
+      <Column Name="PollID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Closes" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PollGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectPath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MimeType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsClosedBound" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AllowMultipleChoices" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ShowVoters" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AllowSkipVote" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="yaf_Poll_yaf_Choice" Member="yaf_Choices" ThisKey="PollID" OtherKey="PollID" Type="yaf_Choice" />
+      <Association Name="yaf_Poll_yaf_PollVote" Member="yaf_PollVotes" ThisKey="PollID" OtherKey="PollID" Type="yaf_PollVote" />
+      <Association Name="yaf_PollGroupCluster_yaf_Poll" Member="yaf_PollGroupCluster" ThisKey="PollGroupID" OtherKey="PollGroupID" Type="yaf_PollGroupCluster" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_PollGroupCluster" Member="yaf_PollGroupClusters">
+    <Type Name="yaf_PollGroupCluster">
+      <Column Name="PollGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsBound" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="yaf_PollGroupCluster_yaf_Category" Member="yaf_Categories" ThisKey="PollGroupID" OtherKey="PollGroupID" Type="yaf_Category" />
+      <Association Name="yaf_PollGroupCluster_yaf_Forum" Member="yaf_Forums" ThisKey="PollGroupID" OtherKey="PollGroupID" Type="yaf_Forum" />
+      <Association Name="yaf_PollGroupCluster_yaf_Poll" Member="yaf_Polls" ThisKey="PollGroupID" OtherKey="PollGroupID" Type="yaf_Poll" />
+      <Association Name="yaf_PollGroupCluster_yaf_Topic" Member="yaf_Topics" ThisKey="PollGroupID" OtherKey="PollID" Type="yaf_Topic" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_PollVote" Member="yaf_PollVotes">
+    <Type Name="yaf_PollVote">
+      <Column Name="PollVoteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PollID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RemoteIP" Type="System.String" DbType="VarChar(57)" CanBeNull="true" />
+      <Column Name="ChoiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="yaf_Poll_yaf_PollVote" Member="yaf_Poll" ThisKey="PollID" OtherKey="PollID" Type="yaf_Poll" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_prov_Application" Member="yaf_prov_Applications">
+    <Type Name="yaf_prov_Application">
+      <Column Name="ApplicationID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ApplicationNameLwd" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_prov_Membership" Member="yaf_prov_Memberships">
+    <Type Name="yaf_prov_Membership">
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ApplicationID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="UsernameLwd" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordFormat" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EmailLwd" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastActivity" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPasswordChange" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastLockOut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FailedPasswordAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FailedAnswerAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FailedPasswordWindow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FailedAnswerWindow" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Joined" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_prov_Profile" Member="yaf_prov_Profiles">
+    <Type Name="yaf_prov_Profile">
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RealName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BlogServiceUrl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Blog" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BlogServiceUsername" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BlogServicePassword" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AIM" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GoogleTalk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Interests" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Homepage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Skype" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ICQ" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="XMPP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="YIM" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_prov_Role" Member="yaf_prov_Roles">
+    <Type Name="yaf_prov_Role">
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ApplicationID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleNameLwd" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_prov_RoleMembership" Member="yaf_prov_RoleMemberships">
+    <Type Name="yaf_prov_RoleMembership">
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Rank" Member="yaf_Ranks">
+    <Type Name="yaf_Rank">
+      <Column Name="RankID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MinPosts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RankImage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PMLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Style" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="UsrSigChars" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrSigBBCodes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UsrSigHTMLTags" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UsrAlbums" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAlbumImages" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Rank_yaf_User" Member="yaf_Users" ThisKey="RankID" OtherKey="RankID" Type="yaf_User" />
+      <Association Name="yaf_Board_yaf_Rank" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Registry" Member="yaf_Registries">
+    <Type Name="yaf_Registry">
+      <Column Name="RegistryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="yaf_Board_yaf_Registry" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Replace_Words" Member="yaf_Replace_Words">
+    <Type Name="yaf_Replace_Word">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BadWord" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GoodWord" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_ShoutboxMessage" Member="yaf_ShoutboxMessages">
+    <Type Name="yaf_ShoutboxMessage">
+      <Column Name="ShoutBoxMessageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Smiley" Member="yaf_Smileys">
+    <Type Name="yaf_Smiley">
+      <Column Name="SmileyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Emoticon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_Board_yaf_Smiley" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Thanks" Member="yaf_Thanks">
+    <Type Name="yaf_Thank">
+      <Column Name="ThanksID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ThanksFromUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThanksToUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThanksDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_User_yaf_Thank" Member="yaf_User" ThisKey="ThanksFromUserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_Topic" Member="yaf_Topics">
+    <Type Name="yaf_Topic">
+      <Column Name="TopicID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Posted" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Topic" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Views" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PollID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TopicMovedID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastPosted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastMessageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NumPosts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsQuestion" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AnswerMessageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastMessageFlags" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TopicImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="yaf_Topic_yaf_WatchTopic" Member="yaf_WatchTopics" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_WatchTopic" />
+      <Association Name="yaf_Topic_yaf_Active" Member="yaf_Actives" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Active" />
+      <Association Name="yaf_Topic_yaf_FavoriteTopic" Member="yaf_FavoriteTopics" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_FavoriteTopic" />
+      <Association Name="yaf_Topic_yaf_Forum" Member="yaf_Forums" ThisKey="TopicID" OtherKey="LastTopicID" Type="yaf_Forum" />
+      <Association Name="yaf_Topic_yaf_Message" Member="yaf_Messages" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_Message" />
+      <Association Name="yaf_Topic_yaf_NntpTopic" Member="yaf_NntpTopics" ThisKey="TopicID" OtherKey="TopicID" Type="yaf_NntpTopic" />
+      <Association Name="yaf_Topic_yaf_Topic" Member="yaf_Topics" ThisKey="TopicID" OtherKey="TopicMovedID" Type="yaf_Topic" />
+      <Association Name="yaf_Forum_yaf_Topic" Member="yaf_Forum" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="yaf_Message_yaf_Topic" Member="yaf_Message" ThisKey="LastMessageID" OtherKey="MessageID" Type="yaf_Message" IsForeignKey="true" />
+      <Association Name="yaf_PollGroupCluster_yaf_Topic" Member="yaf_PollGroupCluster" ThisKey="PollID" OtherKey="PollGroupID" Type="yaf_PollGroupCluster" IsForeignKey="true" />
+      <Association Name="yaf_Topic_yaf_Topic" Member="yaf_Topic1" ThisKey="TopicMovedID" OtherKey="TopicID" Type="yaf_Topic" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_Topic" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_Topic1" Member="yaf_User1" ThisKey="LastUserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_User" Member="yaf_Users">
+    <Type Name="yaf_User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderUserKey" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Joined" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastVisit" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(39)" CanBeNull="true" />
+      <Column Name="NumPosts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeZone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Avatar" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Signature" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AvatarImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AvatarImageType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RankID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Suspended" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LanguageFile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThemeFile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TextEditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OverrideDefaultThemes" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PMNotification" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AutoWatchTopics" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DailyDigest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotificationType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsActiveExcluded" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Culture" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Association Name="yaf_User_FF_Article" Member="FF_Articles" ThisKey="UserID" OtherKey="UserID" Type="FF_Article" />
+      <Association Name="yaf_User_yaf_WatchTopic" Member="yaf_WatchTopics" ThisKey="UserID" OtherKey="UserID" Type="yaf_WatchTopic" />
+      <Association Name="yaf_User_FF_UserComment" Member="FF_UserComments" ThisKey="UserID" OtherKey="UserID" Type="FF_UserComment" />
+      <Association Name="yaf_User_yaf_Active" Member="yaf_Actives" ThisKey="UserID" OtherKey="UserID" Type="yaf_Active" />
+      <Association Name="yaf_User_yaf_Buddy" Member="yaf_Buddies" ThisKey="UserID" OtherKey="FromUserID" Type="yaf_Buddy" />
+      <Association Name="yaf_User_yaf_CheckEmail" Member="yaf_CheckEmails" ThisKey="UserID" OtherKey="UserID" Type="yaf_CheckEmail" />
+      <Association Name="yaf_User_yaf_EventLog" Member="yaf_EventLogs" ThisKey="UserID" OtherKey="UserID" Type="yaf_EventLog" />
+      <Association Name="yaf_User_yaf_FavoriteTopic" Member="yaf_FavoriteTopics" ThisKey="UserID" OtherKey="UserID" Type="yaf_FavoriteTopic" />
+      <Association Name="yaf_User_yaf_Forum" Member="yaf_Forums" ThisKey="UserID" OtherKey="LastUserID" Type="yaf_Forum" />
+      <Association Name="yaf_User_yaf_Message" Member="yaf_Messages" ThisKey="UserID" OtherKey="UserID" Type="yaf_Message" />
+      <Association Name="yaf_User_yaf_PMessage" Member="yaf_PMessages" ThisKey="UserID" OtherKey="FromUserID" Type="yaf_PMessage" />
+      <Association Name="yaf_User_yaf_Thank" Member="yaf_Thanks" ThisKey="UserID" OtherKey="ThanksFromUserID" Type="yaf_Thank" />
+      <Association Name="yaf_User_yaf_Topic" Member="yaf_Topics" ThisKey="UserID" OtherKey="UserID" Type="yaf_Topic" />
+      <Association Name="yaf_User_yaf_Topic1" Member="yaf_Topics1" ThisKey="UserID" OtherKey="LastUserID" Type="yaf_Topic" />
+      <Association Name="yaf_User_yaf_UserForum" Member="yaf_UserForums" ThisKey="UserID" OtherKey="UserID" Type="yaf_UserForum" />
+      <Association Name="yaf_User_yaf_UserGroup" Member="yaf_UserGroups" ThisKey="UserID" OtherKey="UserID" Type="yaf_UserGroup" />
+      <Association Name="yaf_User_yaf_UserPMessage" Member="yaf_UserPMessages" ThisKey="UserID" OtherKey="UserID" Type="yaf_UserPMessage" />
+      <Association Name="yaf_User_yaf_WatchForum" Member="yaf_WatchForums" ThisKey="UserID" OtherKey="UserID" Type="yaf_WatchForum" />
+      <Association Name="yaf_Board_yaf_User" Member="yaf_Board" ThisKey="BoardID" OtherKey="BoardID" Type="yaf_Board" IsForeignKey="true" />
+      <Association Name="yaf_Rank_yaf_User" Member="yaf_Rank" ThisKey="RankID" OtherKey="RankID" Type="yaf_Rank" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_UserAlbum" Member="yaf_UserAlbums">
+    <Type Name="yaf_UserAlbum">
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CoverImageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Updated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_UserAlbum_yaf_UserAlbumImage" Member="yaf_UserAlbumImages" ThisKey="AlbumID" OtherKey="AlbumID" Type="yaf_UserAlbumImage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_UserAlbumImage" Member="yaf_UserAlbumImages">
+    <Type Name="yaf_UserAlbumImage">
+      <Column Name="ImageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Bytes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Uploaded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Downloads" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_UserAlbum_yaf_UserAlbumImage" Member="yaf_UserAlbum" ThisKey="AlbumID" OtherKey="AlbumID" Type="yaf_UserAlbum" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_UserForum" Member="yaf_UserForums">
+    <Type Name="yaf_UserForum">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccessMaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Invited" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Accepted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="yaf_AccessMask_yaf_UserForum" Member="yaf_AccessMask" ThisKey="AccessMaskID" OtherKey="AccessMaskID" Type="yaf_AccessMask" IsForeignKey="true" />
+      <Association Name="yaf_Forum_yaf_UserForum" Member="yaf_Forum" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_UserForum" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_UserGroup" Member="yaf_UserGroups">
+    <Type Name="yaf_UserGroup">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="yaf_Group_yaf_UserGroup" Member="yaf_Group" ThisKey="GroupID" OtherKey="GroupID" Type="yaf_Group" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_UserGroup" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_UserMedal" Member="yaf_UserMedals">
+    <Type Name="yaf_UserMedal">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Hide" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OnlyRibbon" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DateAwarded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_UserPMessage" Member="yaf_UserPMessages">
+    <Type Name="yaf_UserPMessage">
+      <Column Name="UserPMessageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PMessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Flags" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsRead" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsInOutbox" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsArchived" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="yaf_PMessage_yaf_UserPMessage" Member="yaf_PMessage" ThisKey="PMessageID" OtherKey="PMessageID" Type="yaf_PMessage" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_UserPMessage" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.yaf_WatchForum" Member="yaf_WatchForums">
+    <Type Name="yaf_WatchForum">
+      <Column Name="WatchForumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastMail" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="yaf_Forum_yaf_WatchForum" Member="yaf_Forum" ThisKey="ForumID" OtherKey="ForumID" Type="yaf_Forum" IsForeignKey="true" />
+      <Association Name="yaf_User_yaf_WatchForum" Member="yaf_User" ThisKey="UserID" OtherKey="UserID" Type="yaf_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
